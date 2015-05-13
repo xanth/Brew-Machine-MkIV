@@ -457,7 +457,7 @@ char cI2cGetInput(char port, char pin)
     {
       return ERROR;
     }
-  //printf("~data = %x\r\n", ~data);
+  printf("~data = %x\r\n", ~data);
   if (((1<<(pin-1)) & ~data)) {
         return TRUE;
   }
