@@ -12,10 +12,14 @@
 #include <stdint.h>
 #include <stdio.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #include "mill.h"
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #include "stm32f10x.h"
 #include "FreeRTOS.h"
 #include "lcd.h"
@@ -24,10 +28,15 @@
 #include "leds.h"
 #include "semphr.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "mill.h"
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "mill.h"
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 void vMillAppletDisplay( void *pvParameters);
 void vMillApplet(int init);
@@ -38,10 +47,14 @@ xSemaphoreHandle xAppletRunningSemaphore;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 volatile MillState xMillState = MILL_STOPPED;
 =======
 volatile int iMillState = MILL_STOPPED;
 >>>>>>> master
+=======
+volatile MillState xMillState = MILL_STOPPED;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 void vMillInit(void){
 
@@ -52,29 +65,41 @@ void vMillInit(void){
   GPIO_Init( MILL_PORT, &GPIO_InitStructure );
   GPIO_ResetBits(MILL_PORT, MILL_PIN); //pull low
 <<<<<<< HEAD
+<<<<<<< HEAD
   xMillState = MILL_STOPPED;
 =======
 >>>>>>> master
+=======
+  xMillState = MILL_STOPPED;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   vSemaphoreCreateBinary(xAppletRunningSemaphore);
 
 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void vMill( MillState state )
 =======
 void vMill( int state )
 >>>>>>> master
+=======
+void vMill( MillState state )
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 {
   if (state == MILL_DRIVING)
     GPIO_WriteBit(MILL_PORT, MILL_PIN, 1);
   else
     GPIO_WriteBit(MILL_PORT, MILL_PIN, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
   xMillState = state;
 =======
   iMillState = state;
 >>>>>>> master
+=======
+  xMillState = state;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 }
 
@@ -137,10 +162,14 @@ void vMillAppletDisplay( void *pvParameters){
             xSemaphoreTake(xAppletRunningSemaphore, portMAX_DELAY); //take the semaphore so that the key handler wont
                                                                                //return to the menu system until its returned
 <<<<<<< HEAD
+<<<<<<< HEAD
                 switch (xMillState)
 =======
                 switch (iMillState)
 >>>>>>> master
+=======
+                switch (xMillState)
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 {
                 case MILL_DRIVING:
                 {
@@ -193,20 +222,28 @@ int iMillKey(int xx, int yy)
     {
       vMill(MILL_STOPPED);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       iMillState = MILL_STOPPED;
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
     }
   else if (xx > START_MILL_X1+1 && xx < START_MILL_X2-1 && yy > START_MILL_Y1+1 && yy < START_MILL_Y2-1)
     {
       vMill(MILL_DRIVING);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       iMillState = MILL_DRIVING;
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     }
   else if (xx > BK_X1 && yy > BK_Y1 && xx < BK_X2 && yy < BK_Y2)
     {

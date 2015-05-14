@@ -17,9 +17,13 @@
 #include "semphr.h"
 #include "console.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 // semaphore that stops the returning from the applet to the menu system until the applet goes into the blocked state.
 xSemaphoreHandle xFlow1AppletRunningSemaphore;
 
@@ -177,12 +181,17 @@ void vTaskLitresToBoil ( void * pvParameters )
               {
                 uBoilFlowState = FLOWING;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //sprintf(buf, "last:%d,\r\n", ulPulsesSinceLast);
                 //vConsolePrint(buf);
 =======
                 sprintf(buf, "last:%d,\r\n", ulPulsesSinceLast);
                 vConsolePrint(buf);
 >>>>>>> master
+=======
+                //sprintf(buf, "last:%d,\r\n", ulPulsesSinceLast);
+                //vConsolePrint(buf);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
               }
             else
               uBoilFlowState = NOT_FLOWING;

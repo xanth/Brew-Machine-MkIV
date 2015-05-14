@@ -63,6 +63,7 @@ typedef enum
 #define USART_PARAMS2 GPIO_Pin_2, GPIO_Pin_3,  USART2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 void comm_put(char d);
 void comm_puts(const char* s);
@@ -71,10 +72,19 @@ void USARTInit(uint16_t tx_pin, uint16_t rx_pin, uint32_t clock);
 void vSerialHandlerTask( void * pvParameters);
 void vSerialControlCentreTask( void * pvParameters);
 =======
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void comm_put(char d);
 void comm_puts(const char* s);
+uint8_t comm_get(void);
 void USARTInit(uint16_t tx_pin, uint16_t rx_pin, uint32_t clock);
+<<<<<<< HEAD
 >>>>>>> master
+=======
+void vSerialHandlerTask( void * pvParameters);
+void vSerialControlCentreTask( void * pvParameters);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 #endif
 

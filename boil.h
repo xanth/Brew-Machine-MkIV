@@ -12,9 +12,13 @@ void vBoilInit(void);
 void vBoilApplet(int init);
 int iBoilKey(int xx, int yy);
 <<<<<<< HEAD
+<<<<<<< HEAD
 unsigned char ucGetBoilState();
 =======
 >>>>>>> master
+=======
+unsigned char ucGetBoilState();
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 extern xQueueHandle xBoilQueue;
 
 #endif /* BOIL_H_ */

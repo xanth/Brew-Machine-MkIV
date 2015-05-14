@@ -25,9 +25,13 @@
 #include "io_util.h"
 #include "brew.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 
 xQueueHandle xBoilValveQueue;
@@ -109,6 +113,7 @@ void vTaskBoilValve(void * pvParameters)
   // Create Message structures in memory
   static struct GenericMessage * xMessage, *xLastMessage, *xToSend;
 <<<<<<< HEAD
+<<<<<<< HEAD
   xLastMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   xToSend = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
@@ -117,6 +122,11 @@ void vTaskBoilValve(void * pvParameters)
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
   xToSend = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  xLastMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+  xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+  xToSend = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     static int iComplete = 0;
   uint8_t limit = 0xFF, limit1 = 0xFF; //neither on or off.
   static int iC = STOP;
@@ -146,6 +156,9 @@ void vTaskBoilValve(void * pvParameters)
               xToSend->uiStepNumber = xMessage->uiStepNumber;
               iCommandState = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 //#ifdef TESTING
 //
@@ -162,8 +175,11 @@ void vTaskBoilValve(void * pvParameters)
 //                            iBoilValveState = STOPPED;
 //                          }
 //#endif
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
             }
 
 
@@ -328,9 +344,13 @@ void vTaskBoilValve(void * pvParameters)
         }
       }// Switch
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
       if (iCommandState == 1 && xMessage->ucFromTask == BREW_TASK)
              {
               const int iTest = 40;
@@ -503,10 +523,14 @@ int iBoilValveKey(int xx, int yy){
   static uint16_t last_window = 0;
   static struct GenericMessage * pxMessage;
 <<<<<<< HEAD
+<<<<<<< HEAD
   pxMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
   pxMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  pxMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   int iOpen= OPEN, iClose = CLOSE, iStop = STOP;
   pxMessage->pvMessageContent = &iStop;
 

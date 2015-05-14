@@ -23,9 +23,13 @@
 #include "console.h"
 #include "Flow1.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 volatile char hlt_state = OFF;
 
@@ -99,6 +103,7 @@ void vTaskBrewHLT(void * pvParameters)
   char hlt_ok = 0;
   struct TextMsg  * NewMessage;
 <<<<<<< HEAD
+<<<<<<< HEAD
   NewMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
   struct GenericMessage * xMessage;
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
@@ -107,6 +112,11 @@ void vTaskBrewHLT(void * pvParameters)
   struct GenericMessage * xMessage;
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  NewMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
+  struct GenericMessage * xMessage;
+  xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   char pcMessageText[40];
   static unsigned char ucStep = 0;
   static unsigned char ucHeatAndFillMessageSent = 0;
@@ -232,6 +242,7 @@ void vTaskBrewHLT(void * pvParameters)
               //vConsolePrint("WARNING, Water not above element in HLT\r\n");
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef TESTING
           if (ucHeatAndFillMessageSent == 0)
             {
@@ -244,6 +255,12 @@ void vTaskBrewHLT(void * pvParameters)
               vValveActuate(HLT_VALVE, CLOSE);
               vTaskDelay(500);
 
+=======
+#ifdef TESTING
+          GPIO_WriteBit(HLT_SSR_PORT, HLT_SSR_PIN, 0);
+          if (ucHeatAndFillMessageSent == 0)
+            {
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
               vConsolePrint("HLT: Temp and level reached, sending msg\r\n");
               BrewState.ucHLTState = HLT_STATE_AT_TEMP;
               xMessage->ucFromTask = HLT_TASK;
@@ -254,9 +271,12 @@ void vTaskBrewHLT(void * pvParameters)
               ucHeatAndFillMessageSent = 1;
             }
 #endif
+<<<<<<< HEAD
 =======
 
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
           break;
         }
@@ -275,6 +295,7 @@ void vTaskBrewHLT(void * pvParameters)
               vValveActuate(HLT_VALVE, OPEN);
               BrewState.ucHLTState = HLT_STATE_DRAIN;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef TESTING
               GPIO_WriteBit(HLT_SSR_PORT, HLT_SSR_PIN, 0);
               vValveActuate(INLET_VALVE, OPEN);
@@ -292,6 +313,17 @@ void vTaskBrewHLT(void * pvParameters)
               xQueueSendToBack(xBrewTaskReceiveQueue, &xMessage, 0);
               vConsolePrint("HLT is DRAINED\r\n");
               uRcvdState = HLT_STATE_IDLE;
+=======
+#ifdef TESTING
+              vValveActuate(HLT_VALVE, CLOSE);
+                           xMessage->ucFromTask = HLT_TASK;
+                           xMessage->ucToTask = BREW_TASK;
+                           xMessage->uiStepNumber = ucStep;
+                           xMessage->pvMessageContent = (void *)&STEP_COMPLETE;
+                           xQueueSendToBack(xBrewTaskReceiveQueue, &xMessage, 0);
+                           vConsolePrint("HLT is DRAINED\r\n");
+                           uRcvdState = HLT_STATE_IDLE;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #endif
             }
           vValveActuate(HLT_VALVE, OPEN);
@@ -305,11 +337,14 @@ void vTaskBrewHLT(void * pvParameters)
 #ifdef TESTING
           fActualLitresDelivered = fLitresToDrain + 1;
 #endif
+<<<<<<< HEAD
 =======
             }
           vValveActuate(HLT_VALVE, OPEN);
           fActualLitresDelivered = fGetBoilFlowLitres();
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
           if (fActualLitresDelivered >= fLitresToDrain)
             {
               vValveActuate(HLT_VALVE, CLOSE);
@@ -335,9 +370,13 @@ void vTaskBrewHLT(void * pvParameters)
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //=================================================================================================================================================================
 
 void vTaskHLTLevelChecker( void * pvParameters)

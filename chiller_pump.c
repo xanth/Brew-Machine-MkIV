@@ -21,9 +21,13 @@
 #include "chiller_pump.h"
 #include "console.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 void vChillerPumpAppletDisplay( void *pvParameters);
 void vChillerPumpApplet(int init);
@@ -37,12 +41,18 @@ xSemaphoreHandle xChillerAppletRunningSemaphore;
 volatile int uChillerPumpState = STOPPED;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 unsigned char ucGetChillerPumpState(){
   return uChillerPumpState;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void vChillerPumpInit(void){
 
   GPIO_InitTypeDef GPIO_InitStructure;

@@ -18,10 +18,15 @@
 #include "queue.h"
 #include "console.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 
 =======
 >>>>>>> master
+=======
+#include "main.h"
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 #define ON 1
 #define OFF 0

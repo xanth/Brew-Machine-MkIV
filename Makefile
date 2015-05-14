@@ -38,10 +38,14 @@ LDSCRIPT=stm32_flash.ld
 
 # should use --gc-sections but the debugger does not seem to be able to cope with the option.
 <<<<<<< HEAD
+<<<<<<< HEAD
 LINKER_FLAGS=-nostartfiles -Xlinker -o$(PROJECT_NAME).axf -Xlinker -M -Xlinker -Map=$(PROJECT_NAME).map -Xlinker --no-gc-sections -lm 
 =======
 LINKER_FLAGS=-nostartfiles -Xlinker -o$(PROJECT_NAME).axf -Xlinker -M -Xlinker -Map=$(PROJECT_NAME).map -Xlinker --no-gc-sections -lm
 >>>>>>> master
+=======
+LINKER_FLAGS=-nostartfiles -Xlinker -o$(PROJECT_NAME).axf -Xlinker -M -Xlinker -Map=$(PROJECT_NAME).map -Xlinker --no-gc-sections -lm 
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 
 # Debugging format.
@@ -56,9 +60,13 @@ DEBUG= gdb
 #OPT = 2
 #OPT = 3
 <<<<<<< HEAD
+<<<<<<< HEAD
 #OPT = 0
 =======
 >>>>>>> master
+=======
+#OPT = 0
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 OPT = 0
 
 
@@ -99,17 +107,24 @@ CFLAGS=-g$(DEBUG)\
 SOURCE=	main.c 	drivers/lcd.c \
 		printf-stdarg.c \
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		stf_syscalls_minimal.c \
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 		drivers/touch.c \
 		drivers/serial.c \
 		drivers/adc.c \
 		drivers/leds.c \
 <<<<<<< HEAD
+<<<<<<< HEAD
 		drivers/buffer.c \
 =======
 >>>>>>> master
+=======
+		drivers/buffer.c \
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 		hlt.c \
 		mash_pump.c \
 		mill.c \
@@ -117,9 +132,13 @@ SOURCE=	main.c 	drivers/lcd.c \
 		hop_dropper.c \
 		stir.c \
 <<<<<<< HEAD
+<<<<<<< HEAD
 		stirApplet.c \
 =======
 >>>>>>> master
+=======
+		stirApplet.c \
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 		menu.c \
 		valves.c \
 		diag_temps.c \
@@ -136,9 +155,13 @@ SOURCE=	main.c 	drivers/lcd.c \
 		parameters.c \
 		boil_valve.c \
 <<<<<<< HEAD
+<<<<<<< HEAD
 		stf_syscalls_minimal.c \
 =======
 >>>>>>> master
+=======
+		stf_syscalls_minimal.c \
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 		io_util.c
 		
 

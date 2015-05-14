@@ -140,9 +140,13 @@ void vTaskBrew(void * pvParameters);
 void vBrewApplet(int init);
 int iBrewKey(int xx, int yy);
 <<<<<<< HEAD
+<<<<<<< HEAD
 void vBrewRemoteStart();
 =======
 >>>>>>> master
+=======
+void vBrewRemoteStart();
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 extern const int STEP_COMPLETE;
 extern const int STEP_FAILED;
@@ -150,6 +154,9 @@ extern const int STEP_WAIT;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 unsigned char ucGetBrewHoursElapsed();
 
@@ -171,8 +178,11 @@ unsigned int uiGetBrewTaskHWM();
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 extern xQueueHandle xBrewTaskReceiveQueue,  xBrewAppletTextQueue;
 
 #endif /* BREW_H_ */

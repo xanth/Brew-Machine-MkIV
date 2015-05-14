@@ -153,10 +153,14 @@ void lcd_init(void)
     else
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
        // printf("\r\nLCD Device ID : %04X ",deviceid);
 =======
         printf("\r\nLCD Device ID : %04X ",deviceid);
 >>>>>>> master
+=======
+       // printf("\r\nLCD Device ID : %04X ",deviceid);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     }
     
     //SET UP//

@@ -69,10 +69,14 @@
 #define configMINIMAL_STACK_SIZE		( ( unsigned portSHORT ) 256 )
 // total heap size was 48*1024
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 53 * 1024 ) )
 =======
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 48 * 1024 ) )
 >>>>>>> master
+=======
+#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 53 * 1024 ) )
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #define configMAX_TASK_NAME_LEN			( 16 )
 #define configUSE_TRACE_FACILITY		1
 #define configUSE_16_BIT_TICKS			0
@@ -84,10 +88,14 @@
 #define configUSE_CO_ROUTINES			0
 #define configMAX_CO_ROUTINE_PRIORITIES ( 2 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #define configUSE_TRACE_FACILITY                1
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 //#define configASSERT(x)  if( ( x ) == 0 ) vAssertCalled( __FILE__, __LINE__ )
 

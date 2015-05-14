@@ -21,6 +21,7 @@
 
 #include "stm32f10x.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <unistd.h>
 
 #include <string.h>
@@ -35,14 +36,24 @@
 
 =======
 #include <stdlib.h>
+=======
+#include <unistd.h>
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #include <string.h>
 #include <stdio.h>
 #include <errno.h>
+
 #include <time.h>
 #include <sys/stat.h>
-#include "FreeRTOS.h"
 #include "serial.h"
+<<<<<<< HEAD
 >>>>>>> master
+=======
+#include "FreeRTOS.h"
+#include <stdlib.h>
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 // Function declaration.
 void _exit(int i);
@@ -117,6 +128,9 @@ int _lseek(int file, int ptr, int dir)
 int _read(int file, char *ptr, int len)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
   int n;
      int num = 0;
@@ -133,8 +147,11 @@ int _read(int file, char *ptr, int len)
          return -1;
      }
      return num;
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 	return 0;
 }
 
@@ -248,6 +265,7 @@ _VOID _free_r(struct _reent *re, _PTR ptr) {
 	vPortFree(ptr);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  void * __attribute__((malloc)) malloc(size_t size)
 {
@@ -262,3 +280,12 @@ void *malloc(size_t size)
     return pvPortMalloc(size);
 }
 >>>>>>> master
+=======
+/*
+ void * __attribute__((malloc)) malloc(size_t size)
+{
+    return pvPortMalloc(size);
+}
+*/
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

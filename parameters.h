@@ -34,6 +34,9 @@ struct Parameters {
   int iStirTime2; // "            "               end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
   //Mash out
     int iMashOutTime; // Minutes
@@ -49,8 +52,11 @@ struct Parameters {
        int iSpargeStirTime1; // "           stir     "       start     "
        int iSpargeStirTime2; // "            "               end
 
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   //Boil
   unsigned int uiBoilTime;
   unsigned int uiBringToBoilTime;
@@ -68,10 +74,15 @@ struct Parameters {
 extern struct Parameters BrewParameters;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 int iParametersKey(int xx, int yy);
 void vParametersApplet(int init);
 =======
 >>>>>>> master
+=======
+int iParametersKey(int xx, int yy);
+void vParametersApplet(int init);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void vParametersInit(void);
 
 

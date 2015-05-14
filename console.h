@@ -10,10 +10,14 @@
 
 void vConsolePrintTask( void * pvParameters);
 <<<<<<< HEAD
+<<<<<<< HEAD
 void vConsolePrint(const char * format);
 =======
 void vConsolePrint(const char * format, ...);
 >>>>>>> master
+=======
+void vConsolePrint(const char * format);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 extern xQueueHandle xPrintQueue;
 
 #endif /* CONSOLE_H_ */
