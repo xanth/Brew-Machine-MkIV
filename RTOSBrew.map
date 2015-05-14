@@ -277,7 +277,11 @@ LOAD /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-
 END GROUP
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .text           0x00000000    0x3b400
+=======
+.text           0x00000000    0x3b098
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 .text           0x00000000    0x3b098
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -935,6 +939,7 @@ END GROUP
                 0x000059ec                hlt_init
  *fill*         0x00005adc        0x4 00
  .text.vTaskBrewHLT
+<<<<<<< HEAD
 <<<<<<< HEAD
                 0x00005ae0      0x7d8 Debug/hlt.o
                 0x00005ae0                vTaskBrewHLT
@@ -4961,6 +4966,8 @@ END GROUP
                                  0x14 (size before relaxing)
  .rodata        0x0003b3dc       0x20 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiprintf.o)
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 0x00005ae0      0x680 Debug/hlt.o
                 0x00005ae0                vTaskBrewHLT
  .text.vTaskHLTLevelChecker
@@ -8984,12 +8991,16 @@ END GROUP
                 0x0003b064       0x10 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-dtoa.o)
                                  0x14 (size before relaxing)
  .rodata        0x0003b074       0x20 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiprintf.o)
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .rodata.str1.4
                 0x00000000       0x30 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiprintf.o)
  *(.eh_frame_hdr)
  *(.eh_frame)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
+<<<<<<< HEAD
 <<<<<<< HEAD
  .ARM.extab     0x0003b3fc        0x0 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2/libgcc.a(_divdi3.o)
  .ARM.extab     0x0003b3fc        0x0 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2/libgcc.a(_udivdi3.o)
@@ -9009,6 +9020,8 @@ END GROUP
                 0x0003b3fc                __init_array_end = .
                 0x0003b3fc                . = ALIGN (0x4)
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .ARM.extab     0x0003b094        0x0 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2/libgcc.a(_divdi3.o)
  .ARM.extab     0x0003b094        0x0 /usr/local/CodeSourcery/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2/libgcc.a(_udivdi3.o)
  *(.gcc_except_table)
@@ -9026,11 +9039,15 @@ END GROUP
  *(.init_array)
                 0x0003b094                __init_array_end = .
                 0x0003b094                . = ALIGN (0x4)
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
+<<<<<<< HEAD
 <<<<<<< HEAD
                 0x0003b3fc                . = ALIGN (0x4)
  *(.fini)
@@ -9040,6 +9057,8 @@ END GROUP
  *(SORT(.fini_array.*))
                 0x0003b3fc                __fini_array_end = .
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 0x0003b094                . = ALIGN (0x4)
  *(.fini)
                 0x0003b094                . = ALIGN (0x4)
@@ -9047,11 +9066,15 @@ END GROUP
  *(.fini_array)
  *(SORT(.fini_array.*))
                 0x0003b094                __fini_array_end = .
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
+<<<<<<< HEAD
 <<<<<<< HEAD
                 0x0003b400                . = ALIGN (0x8)
  *fill*         0x0003b3fc        0x4 00
@@ -9080,6 +9103,8 @@ END GROUP
 
 .data           0x20000000      0xa28 load address 0x0003b408
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 0x0003b098                . = ALIGN (0x8)
  *fill*         0x0003b094        0x4 00
                 0x0003b098                _etext = .
@@ -9106,6 +9131,9 @@ END GROUP
                 0x0003b0a0                _flash_data = .
 
 .data           0x20000000      0xa28 load address 0x0003b0a0
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 0x20000000                _data = .
  *(vtable)
@@ -9140,9 +9168,15 @@ END GROUP
                 0x20000228        0xc Debug/hlt.o
                 0x20000228                HLT_LEVELS
 <<<<<<< HEAD
+<<<<<<< HEAD
  .data.h.7984   0x20000234        0x1 Debug/hlt.o
  .data.w.7983   0x20000235        0x1 Debug/hlt.o
  .data.uRcvdState.7916
+=======
+ .data.h.7979   0x20000234        0x1 Debug/hlt.o
+ .data.w.7978   0x20000235        0x1 Debug/hlt.o
+ .data.uRcvdState.7911
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
  .data.h.7979   0x20000234        0x1 Debug/hlt.o
  .data.w.7978   0x20000235        0x1 Debug/hlt.o
@@ -9164,8 +9198,13 @@ END GROUP
                 0x20000240        0x4 Debug/boil.o
                 0x20000240                diag_duty
 <<<<<<< HEAD
+<<<<<<< HEAD
  .data.h.7355   0x20000244        0x1 Debug/boil.o
  .data.w.7354   0x20000245        0x1 Debug/boil.o
+=======
+ .data.h.7350   0x20000244        0x1 Debug/boil.o
+ .data.w.7349   0x20000245        0x1 Debug/boil.o
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
  .data.h.7350   0x20000244        0x1 Debug/boil.o
  .data.w.7349   0x20000245        0x1 Debug/boil.o
@@ -9199,15 +9238,21 @@ END GROUP
  .data.iStop    0x20000260        0x4 Debug/crane.o
                 0x20000260                iStop
 <<<<<<< HEAD
+<<<<<<< HEAD
  .data.h.7410   0x20000264        0x1 Debug/crane.o
  .data.w.7409   0x20000265        0x1 Debug/crane.o
  *fill*         0x20000266        0x2 00
  .data.iC.7366  0x20000268        0x4 Debug/crane.o
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .data.h.7405   0x20000264        0x1 Debug/crane.o
  .data.w.7404   0x20000265        0x1 Debug/crane.o
  *fill*         0x20000266        0x2 00
  .data.iC.7361  0x20000268        0x4 Debug/crane.o
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .data          0x2000026c        0x0 Debug/speaker.o
  .data          0x2000026c        0x0 Debug/timer.o
@@ -9281,15 +9326,21 @@ END GROUP
                 0x2000085c        0x4 Debug/boil_valve.o
                 0x2000085c                iBoilValveState
 <<<<<<< HEAD
+<<<<<<< HEAD
  .data.h.7916   0x20000860        0x1 Debug/boil_valve.o
  .data.w.7915   0x20000861        0x1 Debug/boil_valve.o
  *fill*         0x20000862        0x2 00
  .data.iC.7881  0x20000864        0x4 Debug/boil_valve.o
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .data.h.7911   0x20000860        0x1 Debug/boil_valve.o
  .data.w.7910   0x20000861        0x1 Debug/boil_valve.o
  *fill*         0x20000862        0x2 00
  .data.iC.7876  0x20000864        0x4 Debug/boil_valve.o
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .data          0x20000868        0x0 Debug/stf_syscalls_minimal.o
  .data.__environ
@@ -9396,7 +9447,11 @@ END GROUP
                 0x20000a28                _edata = .
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .bss            0x20000a28     0xe8f4 load address 0x0003be30
+=======
+.bss            0x20000a28     0xe8f4 load address 0x0003bac8
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 .bss            0x20000a28     0xe8f4 load address 0x0003bac8
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -9418,7 +9473,11 @@ END GROUP
  .bss           0x20000a84        0x0 Debug/serial.o
  .bss.g_usart   0x20000a84        0x4 Debug/serial.o
 <<<<<<< HEAD
+<<<<<<< HEAD
  .bss.brewStarted.7304
+=======
+ .bss.brewStarted.7299
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
  .bss.brewStarted.7299
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -9447,6 +9506,7 @@ END GROUP
                 0x20000a9c        0x4 Debug/hlt.o
                 0x20000a9c                xTaskHLTLevelCheckerTaskHandle
 <<<<<<< HEAD
+<<<<<<< HEAD
  .bss.last_window.7985
                 0x20000aa0        0x2 Debug/hlt.o
  .bss.tog.7964  0x20000aa2        0x1 Debug/hlt.o
@@ -9464,6 +9524,8 @@ END GROUP
                 0x20000e90        0x4 Debug/hlt.o
  .bss.fDrainLitres.7918
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .bss.last_window.7980
                 0x20000aa0        0x2 Debug/hlt.o
  .bss.tog.7959  0x20000aa2        0x1 Debug/hlt.o
@@ -9480,6 +9542,9 @@ END GROUP
  .bss.fLitresToDrain.7917
                 0x20000e90        0x4 Debug/hlt.o
  .bss.fDrainLitres.7913
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 0x20000e94        0x4 Debug/hlt.o
  .bss           0x20000e98        0x0 Debug/mash_pump.o
@@ -9523,6 +9588,7 @@ END GROUP
                 0x20000ec0        0x4 Debug/boil.o
                 0x20000ec0                xBoilAppletDisplayHandle
 <<<<<<< HEAD
+<<<<<<< HEAD
  .bss.zero.7353
                 0x20000ec4        0x4 Debug/boil.o
  .bss.last_window.7356
@@ -9535,6 +9601,8 @@ END GROUP
                 0x20000f00        0x4 Debug/boil.o
  .bss.buf.7331  0x20000f04       0x34 Debug/boil.o
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .bss.zero.7348
                 0x20000ec4        0x4 Debug/boil.o
  .bss.last_window.7351
@@ -9546,6 +9614,9 @@ END GROUP
  .bss.compare.7324
                 0x20000f00        0x4 Debug/boil.o
  .bss.buf.7326  0x20000f04       0x34 Debug/boil.o
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .bss           0x20000f38        0x0 Debug/hop_dropper.o
  .bss.uState    0x20000f38        0x1 Debug/hop_dropper.o
@@ -9621,6 +9692,7 @@ END GROUP
                 0x20000fb8        0x4 Debug/crane.o
                 0x20000fb8                xCraneAppletDisplayHandle
 <<<<<<< HEAD
+<<<<<<< HEAD
  .bss.last_window.7411
                 0x20000fbc        0x2 Debug/crane.o
  .bss.tog.7387  0x20000fbe        0x1 Debug/crane.o
@@ -9639,6 +9711,8 @@ END GROUP
                 0x20000fd4        0x4 Debug/crane.o
  .bss.ucDownIncrements.7363
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .bss.last_window.7406
                 0x20000fbc        0x2 Debug/crane.o
  .bss.tog.7382  0x20000fbe        0x1 Debug/crane.o
@@ -9656,6 +9730,9 @@ END GROUP
  .bss.iCommandState.7362
                 0x20000fd4        0x4 Debug/crane.o
  .bss.ucDownIncrements.7358
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 0x20000fd8        0x1 Debug/crane.o
  .bss           0x20000fd9        0x0 Debug/speaker.o
@@ -9858,6 +9935,7 @@ END GROUP
  .bss           0x2000153b        0x0 Debug/boil_valve.o
  *fill*         0x2000153b        0x1 00
 <<<<<<< HEAD
+<<<<<<< HEAD
  .bss.pxMessage.7918
                 0x2000153c        0x4 Debug/boil_valve.o
  .bss.last_window.7917
@@ -9874,6 +9952,8 @@ END GROUP
                 0x20001550        0x4 Debug/boil_valve.o
  .bss.iCommandState.7882
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .bss.pxMessage.7913
                 0x2000153c        0x4 Debug/boil_valve.o
  .bss.last_window.7912
@@ -9889,6 +9969,9 @@ END GROUP
  .bss.iComplete.7873
                 0x20001550        0x4 Debug/boil_valve.o
  .bss.iCommandState.7877
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
                 0x20001554        0x4 Debug/boil_valve.o
  .bss           0x20001558        0x0 Debug/stf_syscalls_minimal.o
@@ -10249,7 +10332,11 @@ OUTPUT(RTOSBrew.axf elf32-littlearm)
  .debug_info    0x00038092      0x1c7 Debug/startup_stm32f10x.o
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .debug_line     0x00000000    0x14649
+=======
+.debug_line     0x00000000    0x1460a
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 .debug_line     0x00000000    0x1460a
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -10261,6 +10348,7 @@ OUTPUT(RTOSBrew.axf elf32-littlearm)
  .debug_line    0x00001d1d      0x3d1 Debug/adc.o
  .debug_line    0x000020ee      0x471 Debug/leds.o
  .debug_line    0x0000255f      0x3d7 Debug/buffer.o
+<<<<<<< HEAD
 <<<<<<< HEAD
  .debug_line    0x00002936      0x666 Debug/hlt.o
  .debug_line    0x00002f9c      0x4be Debug/mash_pump.o
@@ -10307,6 +10395,8 @@ OUTPUT(RTOSBrew.axf elf32-littlearm)
  .debug_line    0x0001446f      0x140 Debug/heap_2.o
  .debug_line    0x000145af       0x9a Debug/startup_stm32f10x.o
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  .debug_line    0x00002936      0x651 Debug/hlt.o
  .debug_line    0x00002f87      0x4be Debug/mash_pump.o
  .debug_line    0x00003445      0x4c2 Debug/mill.o
@@ -10351,6 +10441,9 @@ OUTPUT(RTOSBrew.axf elf32-littlearm)
  .debug_line    0x00014297      0x199 Debug/port.o
  .debug_line    0x00014430      0x140 Debug/heap_2.o
  .debug_line    0x00014570       0x9a Debug/startup_stm32f10x.o
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 .debug_loc      0x00000000    0x189d0
@@ -10782,6 +10875,7 @@ OUTPUT(RTOSBrew.axf elf32-littlearm)
  .debug_ranges  0x00003ed8       0x20 Debug/startup_stm32f10x.o
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .debug_str      0x00000000     0x7771
  .debug_str     0x00000000      0xdcc Debug/main.o
                                 0xe85 (size before relaxing)
@@ -10888,6 +10982,8 @@ OUTPUT(RTOSBrew.axf elf32-littlearm)
  .debug_str     0x000076d8       0x99 Debug/startup_stm32f10x.o
                                 0x17f (size before relaxing)
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 .debug_str      0x00000000     0x7770
  .debug_str     0x00000000      0xdcb Debug/main.o
                                 0xe84 (size before relaxing)
@@ -10993,6 +11089,9 @@ OUTPUT(RTOSBrew.axf elf32-littlearm)
                                 0x24a (size before relaxing)
  .debug_str     0x000076d7       0x99 Debug/startup_stm32f10x.o
                                 0x17e (size before relaxing)
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 .comment        0x00000000       0x2a

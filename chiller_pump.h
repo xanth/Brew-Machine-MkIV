@@ -22,10 +22,15 @@ int iChillerPumpKey(int xx, int yy);
 void vChillerPump(uint8_t state);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 unsigned char ucGetChillerPumpState();
 
 =======
 >>>>>>> master
+=======
+unsigned char ucGetChillerPumpState();
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 unsigned char ucGetChillerPumpState();
 

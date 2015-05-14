@@ -70,10 +70,14 @@
 // total heap size was 48*1024
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 53 * 1024 ) )
 =======
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 48 * 1024 ) )
 >>>>>>> master
+=======
+#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 53 * 1024 ) )
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 53 * 1024 ) )
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -89,10 +93,14 @@
 #define configMAX_CO_ROUTINE_PRIORITIES ( 2 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #define configUSE_TRACE_FACILITY                1
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

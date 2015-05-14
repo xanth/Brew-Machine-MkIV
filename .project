@@ -2,10 +2,14 @@
 <projectDescription>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<name>BrewMachineTesting</name>
 =======
 	<name>stm32_freertos_example</name>
 >>>>>>> master
+=======
+	<name>BrewMachineTesting</name>
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 	<name>BrewMachineTesting</name>
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -30,6 +34,7 @@
 		<nature>org.eclipse.cdt.core.cnature</nature>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
@@ -38,6 +43,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 >>>>>>> master
+=======
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>

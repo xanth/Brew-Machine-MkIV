@@ -141,9 +141,13 @@ void vBrewApplet(int init);
 int iBrewKey(int xx, int yy);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void vBrewRemoteStart();
 =======
 >>>>>>> master
+=======
+void vBrewRemoteStart();
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 void vBrewRemoteStart();
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -155,6 +159,9 @@ extern const int STEP_WAIT;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -179,8 +186,11 @@ unsigned int uiGetBrewTaskHWM();
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 extern xQueueHandle xBrewTaskReceiveQueue,  xBrewAppletTextQueue;

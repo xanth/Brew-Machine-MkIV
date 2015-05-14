@@ -22,9 +22,13 @@
 #include "console.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "main.h"
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -42,6 +46,9 @@ volatile int uChillerPumpState = STOPPED;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 unsigned char ucGetChillerPumpState(){
@@ -49,8 +56,11 @@ unsigned char ucGetChillerPumpState(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void vChillerPumpInit(void){

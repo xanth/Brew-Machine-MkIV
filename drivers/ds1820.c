@@ -166,6 +166,7 @@ void vTaskDS1820Convert( void *pvParameters ){
                   temps[ii] = fTemp [ii];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 else if (fTemp[ii] > (temps[ii] - 5.0))
                   temps[ii] = fTemp [ii];
                 else if (fTemp[ii] <= 85.0 && fTemp[ii] >= 86.0)
@@ -174,6 +175,12 @@ void vTaskDS1820Convert( void *pvParameters ){
                 if (fTemp[ii] > (temps[ii] - 5.0))
                   temps[ii] = fTemp [ii];
 >>>>>>> master
+=======
+                else if (fTemp[ii] > (temps[ii] - 5.0))
+                  temps[ii] = fTemp [ii];
+                else if (fTemp[ii] <= 85.0 && fTemp[ii] >= 86.0)
+                  temps[ii] = fTemp[ii];
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
                 else if (fTemp[ii] > (temps[ii] - 5.0))
                   temps[ii] = fTemp [ii];

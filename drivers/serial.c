@@ -5,12 +5,16 @@
 #include "stm32f10x.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #include <unistd.h>
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
+<<<<<<< HEAD
 <<<<<<< HEAD
 #include "serial.h"
 #include "buffer.h"
@@ -34,6 +38,8 @@ static uint32_t g_usart;
 
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #include "serial.h"
 #include "buffer.h"
 #include "semphr.h"
@@ -52,7 +58,11 @@ xSemaphoreHandle xSerialHandlerSemaphore;
 
 static uint32_t g_usart;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> master
+=======
+// static USART_TypeDef* g_usart; CAN USE THIS IF TESTED... CLEARS COMPILER WARNINGS...
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 // static USART_TypeDef* g_usart; CAN USE THIS IF TESTED... CLEARS COMPILER WARNINGS...
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -62,6 +72,7 @@ int comm_test(void)
         return ( USART_GetFlagStatus(g_usart, USART_FLAG_RXNE) == RESET ) ? 0 : 1;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 uint8_t comm_get(void)
@@ -108,6 +119,9 @@ char comm_get(void)
 =======
 uint8_t comm_get(void)
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+uint8_t comm_get(void)
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 {
 
 #ifdef BUFFERED
@@ -146,8 +160,12 @@ void comm_put(char d)
 /*
         while(USART_GetFlagStatus(g_usart, USART_FLAG_TXE) == RESET) { ; }
 <<<<<<< HEAD
+<<<<<<< HEAD
         USART_SendData(g_usart, (uint16_t)d);
 >>>>>>> master
+=======
+        USART_SendData(g_usart, (uint16_t)d);*/
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
         USART_SendData(g_usart, (uint16_t)d);*/
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -165,6 +183,9 @@ void USARTInit(uint16_t tx_pin, uint16_t rx_pin, uint32_t usart)
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -199,6 +220,7 @@ void USARTInit(uint16_t tx_pin, uint16_t rx_pin, uint32_t usart)
   /* USART1 and USART2 configuration ------------------------------------------------------*/
   /* USART and USART2 configured as follow:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	GPIO_InitTypeDef GPIO_InitStructure;
         
@@ -229,6 +251,8 @@ void USARTInit(uint16_t tx_pin, uint16_t rx_pin, uint32_t usart)
 >>>>>>> master
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
          - BaudRate = 115200 baud
          - Word Length = 8 Bits
          - One Stop Bit
@@ -237,6 +261,9 @@ void USARTInit(uint16_t tx_pin, uint16_t rx_pin, uint32_t usart)
          - Receive and transmit enabled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
    */
@@ -278,6 +305,7 @@ void USARTInit(uint16_t tx_pin, uint16_t rx_pin, uint32_t usart)
        // comm_puts("TEST\0\r\n");
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -442,6 +470,11 @@ static char brewStarted = FALSE;
 }
 
 
+=======
+}
+
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void USART1_IRQHandler(void)
 {
   portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
@@ -578,6 +611,9 @@ static char brewStarted = FALSE;
 
 
 }
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 

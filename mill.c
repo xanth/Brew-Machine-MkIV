@@ -13,10 +13,14 @@
 #include <stdio.h>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #include "mill.h"
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -29,10 +33,15 @@
 #include "semphr.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "mill.h"
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "mill.h"
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "mill.h"
 #include "main.h"
@@ -48,10 +57,14 @@ xSemaphoreHandle xAppletRunningSemaphore;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 volatile MillState xMillState = MILL_STOPPED;
 =======
 volatile int iMillState = MILL_STOPPED;
 >>>>>>> master
+=======
+volatile MillState xMillState = MILL_STOPPED;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 volatile MillState xMillState = MILL_STOPPED;
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -66,9 +79,13 @@ void vMillInit(void){
   GPIO_ResetBits(MILL_PORT, MILL_PIN); //pull low
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xMillState = MILL_STOPPED;
 =======
 >>>>>>> master
+=======
+  xMillState = MILL_STOPPED;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xMillState = MILL_STOPPED;
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -79,10 +96,14 @@ void vMillInit(void){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void vMill( MillState state )
 =======
 void vMill( int state )
 >>>>>>> master
+=======
+void vMill( MillState state )
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 void vMill( MillState state )
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -93,10 +114,14 @@ void vMill( MillState state )
     GPIO_WriteBit(MILL_PORT, MILL_PIN, 0);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xMillState = state;
 =======
   iMillState = state;
 >>>>>>> master
+=======
+  xMillState = state;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xMillState = state;
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -163,10 +188,14 @@ void vMillAppletDisplay( void *pvParameters){
                                                                                //return to the menu system until its returned
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 switch (xMillState)
 =======
                 switch (iMillState)
 >>>>>>> master
+=======
+                switch (xMillState)
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
                 switch (xMillState)
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -223,10 +252,14 @@ int iMillKey(int xx, int yy)
       vMill(MILL_STOPPED);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       iMillState = MILL_STOPPED;
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -237,10 +270,14 @@ int iMillKey(int xx, int yy)
       vMill(MILL_DRIVING);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       iMillState = MILL_DRIVING;
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

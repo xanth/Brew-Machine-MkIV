@@ -39,10 +39,14 @@ static int menu_touch_x;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //static unsigned start_time;
 =======
 static unsigned start_time;
 >>>>>>> master
+=======
+//static unsigned start_time;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 //static unsigned start_time;
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -217,6 +221,9 @@ static void menu_back_after_applet()
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 static unsigned g_incoming_command = 0;
@@ -232,6 +239,7 @@ void menu_command(unsigned item)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void menu_touch(int xx, int yy)
 {
   //char c[15];
@@ -242,6 +250,12 @@ void menu_touch(int xx, int yy)
   //char c[15];
   //vConsolePrint("Menu Touch Called\r\n");
 >>>>>>> master
+=======
+void menu_touch(int xx, int yy)
+{
+  //char c[15];
+  vConsolePrint("Menu Touch Called\r\n");
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 void menu_touch(int xx, int yy)
 {
@@ -261,6 +275,7 @@ void menu_touch(int xx, int yy)
     menu_touch_y = yy;
     menu_touch_x = xx;    
     //menu_update();       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     char bb[30];
@@ -288,6 +303,10 @@ void menu_touch(int xx, int yy)
 =======
     char bb[30];
     int old = g_item;
+=======
+    char bb[30];
+    int old = g_item;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     if (g_incoming_command == 1)
       {
        g_item = g_command_item;
@@ -302,6 +321,9 @@ void menu_touch(int xx, int yy)
    // sprintf(bb, "Item Selected is: %u\r\n", g_item);
   //  vConsolePrint(bb);
   //  fflush(stdout);
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     lcd_lock();
 

@@ -24,11 +24,17 @@
 #include "adc.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // main.h holds the definition for the preprocessor directive TESTING
 #include "main.h"
 
 =======
 >>>>>>> master
+=======
+// main.h holds the definition for the preprocessor directive TESTING
+#include "main.h"
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 // main.h holds the definition for the preprocessor directive TESTING
 #include "main.h"
@@ -40,9 +46,12 @@
 #define BOIL_PIN GPIO_Pin_12
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #define BOIL_DUTY_ADC_CHAN 10 // This is PC0
@@ -69,6 +78,9 @@ void vTaskBoil( void * pvParameters);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 unsigned char ucGetBoilState(){
@@ -76,8 +88,11 @@ unsigned char ucGetBoilState(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 // semaphore that stops the returning from the applet to the menu system until the applet goes into the blocked state.
@@ -141,10 +156,14 @@ void vBoilInit(void)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xBoilQueue = xQueueCreate(1, sizeof(struct GenericMessage *));
 =======
   xBoilQueue = xQueueCreate(5, sizeof(struct GenericMessage *));
 >>>>>>> master
+=======
+  xBoilQueue = xQueueCreate(1, sizeof(struct GenericMessage *));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xBoilQueue = xQueueCreate(1, sizeof(struct GenericMessage *));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -178,10 +197,14 @@ void vTaskBoil( void * pvParameters)
   struct GenericMessage * xMessage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -430,10 +453,14 @@ int iBoilKey(int xx, int yy)
   struct GenericMessage * xMessage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

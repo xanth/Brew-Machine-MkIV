@@ -154,10 +154,14 @@ void lcd_init(void)
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        // printf("\r\nLCD Device ID : %04X ",deviceid);
 =======
         printf("\r\nLCD Device ID : %04X ",deviceid);
 >>>>>>> master
+=======
+       // printf("\r\nLCD Device ID : %04X ",deviceid);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
        // printf("\r\nLCD Device ID : %04X ",deviceid);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

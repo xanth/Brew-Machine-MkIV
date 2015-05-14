@@ -19,10 +19,15 @@
 #include "console.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 
 =======
 >>>>>>> master
+=======
+#include "main.h"
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "main.h"
 

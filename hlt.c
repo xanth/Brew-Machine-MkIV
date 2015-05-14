@@ -24,9 +24,13 @@
 #include "Flow1.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "main.h"
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -104,6 +108,7 @@ void vTaskBrewHLT(void * pvParameters)
   struct TextMsg  * NewMessage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   NewMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
   struct GenericMessage * xMessage;
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
@@ -112,6 +117,11 @@ void vTaskBrewHLT(void * pvParameters)
   struct GenericMessage * xMessage;
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  NewMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
+  struct GenericMessage * xMessage;
+  xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   NewMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
   struct GenericMessage * xMessage;
@@ -243,6 +253,7 @@ void vTaskBrewHLT(void * pvParameters)
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef TESTING
           if (ucHeatAndFillMessageSent == 0)
             {
@@ -256,10 +267,15 @@ void vTaskBrewHLT(void * pvParameters)
               vTaskDelay(500);
 
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #ifdef TESTING
           GPIO_WriteBit(HLT_SSR_PORT, HLT_SSR_PIN, 0);
           if (ucHeatAndFillMessageSent == 0)
             {
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
               vConsolePrint("HLT: Temp and level reached, sending msg\r\n");
               BrewState.ucHLTState = HLT_STATE_AT_TEMP;
@@ -272,9 +288,12 @@ void vTaskBrewHLT(void * pvParameters)
             }
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -296,6 +315,7 @@ void vTaskBrewHLT(void * pvParameters)
               BrewState.ucHLTState = HLT_STATE_DRAIN;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef TESTING
               GPIO_WriteBit(HLT_SSR_PORT, HLT_SSR_PIN, 0);
               vValveActuate(INLET_VALVE, OPEN);
@@ -314,6 +334,8 @@ void vTaskBrewHLT(void * pvParameters)
               vConsolePrint("HLT is DRAINED\r\n");
               uRcvdState = HLT_STATE_IDLE;
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #ifdef TESTING
               vValveActuate(HLT_VALVE, CLOSE);
                            xMessage->ucFromTask = HLT_TASK;
@@ -323,6 +345,9 @@ void vTaskBrewHLT(void * pvParameters)
                            xQueueSendToBack(xBrewTaskReceiveQueue, &xMessage, 0);
                            vConsolePrint("HLT is DRAINED\r\n");
                            uRcvdState = HLT_STATE_IDLE;
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #endif
             }
@@ -338,11 +363,14 @@ void vTaskBrewHLT(void * pvParameters)
           fActualLitresDelivered = fLitresToDrain + 1;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             }
           vValveActuate(HLT_VALVE, OPEN);
           fActualLitresDelivered = fGetBoilFlowLitres();
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
           if (fActualLitresDelivered >= fLitresToDrain)
@@ -371,9 +399,13 @@ void vTaskBrewHLT(void * pvParameters)
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

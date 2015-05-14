@@ -26,9 +26,13 @@
 #include "brew.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "main.h"
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -114,6 +118,7 @@ void vTaskBoilValve(void * pvParameters)
   static struct GenericMessage * xMessage, *xLastMessage, *xToSend;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xLastMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   xToSend = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
@@ -122,6 +127,11 @@ void vTaskBoilValve(void * pvParameters)
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
   xToSend = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  xLastMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+  xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+  xToSend = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xLastMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
@@ -157,6 +167,9 @@ void vTaskBoilValve(void * pvParameters)
               iCommandState = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -176,8 +189,11 @@ void vTaskBoilValve(void * pvParameters)
 //                          }
 //#endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
             }
@@ -345,9 +361,13 @@ void vTaskBoilValve(void * pvParameters)
       }// Switch
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -524,10 +544,14 @@ int iBoilValveKey(int xx, int yy){
   static struct GenericMessage * pxMessage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   pxMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
   pxMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  pxMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   pxMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

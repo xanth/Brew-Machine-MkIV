@@ -39,10 +39,14 @@ LDSCRIPT=stm32_flash.ld
 # should use --gc-sections but the debugger does not seem to be able to cope with the option.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 LINKER_FLAGS=-nostartfiles -Xlinker -o$(PROJECT_NAME).axf -Xlinker -M -Xlinker -Map=$(PROJECT_NAME).map -Xlinker --no-gc-sections -lm 
 =======
 LINKER_FLAGS=-nostartfiles -Xlinker -o$(PROJECT_NAME).axf -Xlinker -M -Xlinker -Map=$(PROJECT_NAME).map -Xlinker --no-gc-sections -lm
 >>>>>>> master
+=======
+LINKER_FLAGS=-nostartfiles -Xlinker -o$(PROJECT_NAME).axf -Xlinker -M -Xlinker -Map=$(PROJECT_NAME).map -Xlinker --no-gc-sections -lm 
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 LINKER_FLAGS=-nostartfiles -Xlinker -o$(PROJECT_NAME).axf -Xlinker -M -Xlinker -Map=$(PROJECT_NAME).map -Xlinker --no-gc-sections -lm 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -61,9 +65,13 @@ DEBUG= gdb
 #OPT = 3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #OPT = 0
 =======
 >>>>>>> master
+=======
+#OPT = 0
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #OPT = 0
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -108,9 +116,12 @@ SOURCE=	main.c 	drivers/lcd.c \
 		printf-stdarg.c \
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		stf_syscalls_minimal.c \
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 		drivers/touch.c \
@@ -119,9 +130,13 @@ SOURCE=	main.c 	drivers/lcd.c \
 		drivers/leds.c \
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		drivers/buffer.c \
 =======
 >>>>>>> master
+=======
+		drivers/buffer.c \
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 		drivers/buffer.c \
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -133,9 +148,13 @@ SOURCE=	main.c 	drivers/lcd.c \
 		stir.c \
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		stirApplet.c \
 =======
 >>>>>>> master
+=======
+		stirApplet.c \
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 		stirApplet.c \
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -156,9 +175,13 @@ SOURCE=	main.c 	drivers/lcd.c \
 		boil_valve.c \
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		stf_syscalls_minimal.c \
 =======
 >>>>>>> master
+=======
+		stf_syscalls_minimal.c \
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 		stf_syscalls_minimal.c \
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

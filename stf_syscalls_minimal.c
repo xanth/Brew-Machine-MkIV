@@ -22,6 +22,9 @@
 #include "stm32f10x.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #include <unistd.h>
 
 #include <string.h>
@@ -30,6 +33,7 @@
 
 #include <time.h>
 #include <sys/stat.h>
+<<<<<<< HEAD
 #include "serial.h"
 #include "FreeRTOS.h"
 #include <stdlib.h>
@@ -50,6 +54,12 @@
 <<<<<<< HEAD
 >>>>>>> master
 =======
+#include "FreeRTOS.h"
+#include <stdlib.h>
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+#include "serial.h"
 #include "FreeRTOS.h"
 #include <stdlib.h>
 
@@ -129,6 +139,9 @@ int _read(int file, char *ptr, int len)
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -148,8 +161,11 @@ int _read(int file, char *ptr, int len)
      }
      return num;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 	return 0;
@@ -266,6 +282,7 @@ _VOID _free_r(struct _reent *re, _PTR ptr) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  void * __attribute__((malloc)) malloc(size_t size)
 {
@@ -280,6 +297,15 @@ void *malloc(size_t size)
     return pvPortMalloc(size);
 }
 >>>>>>> master
+=======
+/*
+ void * __attribute__((malloc)) malloc(size_t size)
+{
+    return pvPortMalloc(size);
+}
+*/
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 /*
  void * __attribute__((malloc)) malloc(size_t size)

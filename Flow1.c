@@ -18,9 +18,13 @@
 #include "console.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "main.h"
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -182,12 +186,17 @@ void vTaskLitresToBoil ( void * pvParameters )
                 uBoilFlowState = FLOWING;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //sprintf(buf, "last:%d,\r\n", ulPulsesSinceLast);
                 //vConsolePrint(buf);
 =======
                 sprintf(buf, "last:%d,\r\n", ulPulsesSinceLast);
                 vConsolePrint(buf);
 >>>>>>> master
+=======
+                //sprintf(buf, "last:%d,\r\n", ulPulsesSinceLast);
+                //vConsolePrint(buf);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
                 //sprintf(buf, "last:%d,\r\n", ulPulsesSinceLast);
                 //vConsolePrint(buf);

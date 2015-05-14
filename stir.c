@@ -21,6 +21,9 @@
 #include "stir.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #include "stirApplet.h"
 
 volatile StirState xStirState;
@@ -31,6 +34,7 @@ void vStirInit(void){
   xStirState = STIR_STOPPED;
   vSemaphoreCreateBinary(xStirAppletRunningSemaphore);
 }
+<<<<<<< HEAD
 
 void vStir( StirState state )
 {
@@ -67,6 +71,9 @@ void vStirInit(void){
   vSemaphoreCreateBinary(xStirAppletRunningSemaphore);
 }
 
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void vStir( StirState state )
 {
   if (state == STIR_DRIVING)
@@ -87,6 +94,8 @@ StirState xGetStirState(void)
 
 }
 >>>>>>> master
+
+
 
 
 

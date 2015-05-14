@@ -13,9 +13,13 @@ void vBoilApplet(int init);
 int iBoilKey(int xx, int yy);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 unsigned char ucGetBoilState();
 =======
 >>>>>>> master
+=======
+unsigned char ucGetBoilState();
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 unsigned char ucGetBoilState();
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

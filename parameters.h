@@ -35,6 +35,9 @@ struct Parameters {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -53,8 +56,11 @@ struct Parameters {
        int iSpargeStirTime2; // "            "               end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   //Boil
@@ -75,10 +81,15 @@ extern struct Parameters BrewParameters;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 int iParametersKey(int xx, int yy);
 void vParametersApplet(int init);
 =======
 >>>>>>> master
+=======
+int iParametersKey(int xx, int yy);
+void vParametersApplet(int init);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 int iParametersKey(int xx, int yy);
 void vParametersApplet(int init);

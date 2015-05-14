@@ -15,10 +15,14 @@
 #include <stdio.h>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #include <stdlib.h>
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -50,9 +54,13 @@
 #include "hop_dropper.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "main.h"
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -152,10 +160,14 @@ static struct BrewStep
   unsigned char ucWait; // Wait for previous steps to be complete?
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 } Brew[]; //Brew is an array of brew steps
 =======
 } Brew[], BrewClean[]; //Brew is an array of brew steps
 >>>>>>> master
+=======
+} Brew[]; //Brew is an array of brew steps
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 } Brew[]; //Brew is an array of brew steps
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -210,10 +222,14 @@ static int iMaxBrewSteps(void)
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   static char buf[50];
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -250,6 +266,9 @@ void vBrewTotalReset(void){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -288,8 +307,11 @@ unsigned char ucGetBrewStep()
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //----------------------------------------------------------------------------------------------------------------------------
@@ -302,12 +324,16 @@ void vTaskBrew(void * pvParameters)
   xBrewStart = xTaskGetTickCount();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //  char pcBrewElapsedTime[50], pcStepElapsedTime[50];
 //  char pcBrewElapsedHours[45], pcBrewElapsedMinutes[45], pcBrewElapsedSeconds[45], pcBrewStep[45];
 //  char pcBrewStepElapsedHours[45], pcBrewStepElapsedMinutes[45], pcBrewStepElapsedSeconds[45], pcMashTemp[45], pcHLTTemp[45];
 ////char pcStepRemainingTime[16];
+<<<<<<< HEAD
 <<<<<<< HEAD
   //uint32_t uStartingStep = (uint32_t)pvParameters;
   //char buf1[40];
@@ -318,6 +344,11 @@ void vTaskBrew(void * pvParameters)
   //uint32_t uStartingStep = (uint32_t)pvParameters;
   //char buf1[40];
 >>>>>>> master
+=======
+  //uint32_t uStartingStep = (uint32_t)pvParameters;
+  //char buf1[40];
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   //uint32_t uStartingStep = (uint32_t)pvParameters;
   //char buf1[40];
@@ -342,10 +373,14 @@ void vTaskBrew(void * pvParameters)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+  xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -377,6 +412,9 @@ void vTaskBrew(void * pvParameters)
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
           // Every thirty seconds, print the brew time and step time to the console.
           if ((BrewState.uSecondsElapsed % 15) == 0)
@@ -387,6 +425,7 @@ void vTaskBrew(void * pvParameters)
             {
 
             }
+<<<<<<< HEAD
 =======
 =======
 
@@ -403,6 +442,8 @@ void vTaskBrew(void * pvParameters)
 >>>>>>> master
 =======
             }
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
           // receive message from queue and if there is one, act on it.. (ie if the message is STEP COMPLETED.. then change to the next step.
@@ -500,10 +541,14 @@ void vBrewReset(void){
   if (xMessage == NULL)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
     xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+    xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -530,10 +575,14 @@ void vBrewNextStep(void){
   if (xMessage ==  NULL)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
     xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+    xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -577,12 +626,17 @@ void vBrewRunStep(void){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   //sprintf(buf, "RunStep: %d -> %s\r\n", BrewState.ucStep, Brew[BrewState.ucStep].pcStepName);
   //vConsolePrint(buf);
 =======
   sprintf(buf, "RunStep: %d -> %s\r\n", BrewState.ucStep, Brew[BrewState.ucStep].pcStepName);
   vConsolePrint(buf);
 >>>>>>> master
+=======
+  //sprintf(buf, "RunStep: %d -> %s\r\n", BrewState.ucStep, Brew[BrewState.ucStep].pcStepName);
+  //vConsolePrint(buf);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   //sprintf(buf, "RunStep: %d -> %s\r\n", BrewState.ucStep, Brew[BrewState.ucStep].pcStepName);
   //vConsolePrint(buf);
@@ -614,6 +668,7 @@ void vBrewHLTSetupFunction(int piParameters[5]){
   if (Content == NULL)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Content = (struct HLTMsg *)pvPortMalloc(sizeof(struct HLTMsg));
   if (Message == NULL)
     Message = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
@@ -622,6 +677,11 @@ void vBrewHLTSetupFunction(int piParameters[5]){
   if (Message == NULL)
     Message = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+    Content = (struct HLTMsg *)pvPortMalloc(sizeof(struct HLTMsg));
+  if (Message == NULL)
+    Message = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     Content = (struct HLTMsg *)pvPortMalloc(sizeof(struct HLTMsg));
   if (Message == NULL)
@@ -733,10 +793,14 @@ void vBrewMillSetupFunction (int piParameters[5])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   vMill(MILL_DRIVING);
 =======
   vMill(DRIVING);
 >>>>>>> master
+=======
+  vMill(MILL_DRIVING);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   vMill(MILL_DRIVING);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -748,6 +812,7 @@ void vBrewValvesSetupFunction (int piParameters[5])
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   vValveActuate(HLT_VALVE, CLOSE);
   vValveActuate(MASH_VALVE, CLOSE);
 =======
@@ -756,6 +821,10 @@ void vBrewValvesSetupFunction (int piParameters[5])
   vValveActuate(MASH_VALVE, CLOSE);
 
 >>>>>>> master
+=======
+  vValveActuate(HLT_VALVE, CLOSE);
+  vValveActuate(MASH_VALVE, CLOSE);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   vValveActuate(HLT_VALVE, CLOSE);
   vValveActuate(MASH_VALVE, CLOSE);
@@ -776,10 +845,14 @@ void vBrewBoilValveSetupFunction (int piParameters[5])
   if (xMessage == NULL)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
     xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+    xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -800,10 +873,14 @@ void vBrewCraneSetupFunction(int piParameters[5])
   if (xMessage == NULL)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
     xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+    xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -824,11 +901,16 @@ void vBrewCraneSetupFunction(int piParameters[5])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 struct GenericMessage xMessage2;
 struct GenericMessage * xMessage1;
 =======
 
 >>>>>>> master
+=======
+struct GenericMessage xMessage2;
+struct GenericMessage * xMessage1;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 struct GenericMessage xMessage2;
 struct GenericMessage * xMessage1;
@@ -840,6 +922,9 @@ void vBrewPreChillSetupFunction(int piParameters[5])
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
  // vConsolePrint("Pre-Chill setup Function called\r\n");
   //new code to stop the boil
 //
@@ -862,6 +947,7 @@ vTaskDelay(2000);
     xMessage = &xMessage2;
 //    if (xMessage ==  NULL)
 //      xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+<<<<<<< HEAD
 =======
 
 =======
@@ -894,16 +980,22 @@ vTaskDelay(2000);
 //    if (xMessage ==  NULL)
 //      xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     xMessage->ucFromTask = CHILL_TASK;
     xMessage->ucToTask = BOIL_VALVE_TASK;
     xMessage->uiStepNumber = BrewState.ucStep;
     xMessage->pvMessageContent = (void *)&iCommand;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     vConsolePrint("Boil Valve Setup Function called\r\n");
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -933,10 +1025,14 @@ void vBrewChillSetupFunction(int piParameters[5])
   if (xMessage ==  NULL)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
     xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+    xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -946,10 +1042,14 @@ void vBrewChillSetupFunction(int piParameters[5])
   xMessage->pvMessageContent = (void *)&iCommand;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   vConsolePrint("Chill Setup Function called\r\n");
 =======
   vConsolePrint("Boil Valve Setup Function called\r\n");
 >>>>>>> master
+=======
+  vConsolePrint("Chill Setup Function called\r\n");
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   vConsolePrint("Chill Setup Function called\r\n");
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -976,9 +1076,13 @@ void vBrewPreChillPollFunction(int piParameters[5])
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -991,6 +1095,9 @@ void vBrewPreChillPollFunction(int piParameters[5])
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //#ifdef TESTING
@@ -1007,8 +1114,11 @@ void vBrewPreChillPollFunction(int piParameters[5])
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -1019,6 +1129,9 @@ void vBrewChillPollFunction(int piParameters[5])
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   static struct GenericMessage * xMessage = NULL;
@@ -1026,8 +1139,11 @@ void vBrewChillPollFunction(int piParameters[5])
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     //Brew[BrewState.ucStep].uTimeRemaining = (BrewParameters.uiChillTime*60) - Brew[BrewState.ucStep].uElapsedTime;
@@ -1038,6 +1154,9 @@ void vBrewChillPollFunction(int piParameters[5])
       Brew[BrewState.ucStep].ucComplete = 1;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
       if (xMessage ==  NULL)
@@ -1047,6 +1166,7 @@ void vBrewChillPollFunction(int piParameters[5])
         xMessage->uiStepNumber = BrewState.ucStep;
         xMessage->pvMessageContent = (void *)&iCommand;
         xQueueSendToBack(xBoilValveQueue, &xMessage, 1000); // Make sure the boil valve is closed.
+<<<<<<< HEAD
 <<<<<<< HEAD
       vBrewNextStep();
 
@@ -1077,6 +1197,8 @@ void vBrewChillPollFunction(int piParameters[5])
     }
 >>>>>>> master
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
       vBrewNextStep();
 
     }
@@ -1100,6 +1222,9 @@ void vBrewChillPollFunction(int piParameters[5])
 //#endif
 
 
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 }
 
@@ -1121,6 +1246,9 @@ void vBrewMillPollFunction (int piParameters[5])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //#ifdef TESTING
@@ -1134,8 +1262,11 @@ void vBrewMillPollFunction (int piParameters[5])
 //#endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -1150,6 +1281,9 @@ void vBrewWaitingPollFunction(int piParameters[5])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -1163,8 +1297,11 @@ void vBrewWaitingPollFunction(int piParameters[5])
 
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   // else
@@ -1181,6 +1318,9 @@ static int iPumpState = MASH_STAGE_1;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 volatile  int iMashTime;
@@ -1233,8 +1373,11 @@ void vBrewSpargeSetupFunction(int piParameters[5])
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   void vBrewMashSetupFunction(int piParameters[5])
@@ -1244,6 +1387,9 @@ void vBrewSpargeSetupFunction(int piParameters[5])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     iMashTime = BrewParameters.iMashTime * 60;
@@ -1261,8 +1407,11 @@ void vBrewSpargeSetupFunction(int piParameters[5])
 
     //open close to get air out of pump.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     int iCycles = 2;
@@ -1272,6 +1421,9 @@ void vBrewSpargeSetupFunction(int piParameters[5])
         vValveActuate(MASH_VALVE, OPEN);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
         vTaskDelay(4000);
         vValveActuate(MASH_VALVE, CLOSED);
         vTaskDelay(4000);
@@ -1281,6 +1433,7 @@ void vBrewSpargeSetupFunction(int piParameters[5])
 
 void vBrewMashPollFunction(int piParameters[5])
 {
+<<<<<<< HEAD
 
   int iTimeRemaining = iMashTime;
 =======
@@ -1305,6 +1458,10 @@ void vBrewMashPollFunction(int piParameters[5])
    iPumpTime2 = BrewParameters.iPumpTime2 * 60;
 >>>>>>> master
 =======
+  int iTimeRemaining = iMashTime;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+
   int iTimeRemaining = iMashTime;
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
    iTimeRemaining = iMashTime;
@@ -1340,11 +1497,16 @@ void vBrewMashPollFunction(int piParameters[5])
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   case MASH_STAGE_2: //blah
 
 =======
   case MASH_STAGE_2:
 >>>>>>> master
+=======
+  case MASH_STAGE_2: //blah
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   case MASH_STAGE_2: //blah
 
@@ -1394,10 +1556,14 @@ void vBrewMashPollFunction(int piParameters[5])
             {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               vStir(STIR_DRIVING);
 =======
               vStir(DRIVING);
 >>>>>>> master
+=======
+              vStir(STIR_DRIVING);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
               vStir(STIR_DRIVING);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1409,10 +1575,14 @@ void vBrewMashPollFunction(int piParameters[5])
             {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               vStir(STIR_STOPPED);
 =======
               vStir(STOPPED);
 >>>>>>> master
+=======
+              vStir(STIR_STOPPED);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
               vStir(STIR_STOPPED);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1428,10 +1598,14 @@ void vBrewMashPollFunction(int piParameters[5])
             {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               vStir(STIR_STOPPED);
 =======
               vStir(STOPPED);
 >>>>>>> master
+=======
+              vStir(STIR_STOPPED);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
               vStir(STIR_STOPPED);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1447,10 +1621,14 @@ void vBrewMashPollFunction(int piParameters[5])
             {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               vStir(STIR_DRIVING);
 =======
               vStir(DRIVING);
 >>>>>>> master
+=======
+              vStir(STIR_DRIVING);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
               vStir(STIR_DRIVING);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1462,10 +1640,14 @@ void vBrewMashPollFunction(int piParameters[5])
             {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               vStir(STIR_STOPPED);
 =======
               vStir(STOPPED);
 >>>>>>> master
+=======
+              vStir(STIR_STOPPED);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
               vStir(STIR_STOPPED);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1489,10 +1671,14 @@ void vBrewMashPollFunction(int piParameters[5])
       vMashPump(STOPPED);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       vStir(STIR_STOPPED);
 =======
       vStir(STOPPED);
 >>>>>>> master
+=======
+      vStir(STIR_STOPPED);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
       vStir(STIR_STOPPED);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1513,9 +1699,13 @@ void vBrewPumpToBoilSetupFunction(int piParameters[5])
   vValveActuate(MASH_VALVE, OPEN);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1530,9 +1720,13 @@ void vBrewPumpToBoilSetupFunction(int piParameters[5])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1553,6 +1747,9 @@ void vBrewPumpToBoilPollFunction(int  piParameters[5])
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #ifdef TESTING
@@ -1566,8 +1763,11 @@ void vBrewPumpToBoilPollFunction(int  piParameters[5])
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -1589,6 +1789,7 @@ void vBrewBoilSetupFunction(int piParameters[5])
   if (xBoilMessage == NULL)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xBoilMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   if (xBoilTextMessage == NULL)
     xBoilTextMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
@@ -1597,6 +1798,11 @@ void vBrewBoilSetupFunction(int piParameters[5])
   if (xBoilTextMessage == NULL)
     xBoilTextMessage = (struct TextMsg *)malloc(sizeof(struct TextMsg));
 >>>>>>> master
+=======
+    xBoilMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+  if (xBoilTextMessage == NULL)
+    xBoilTextMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     xBoilMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   if (xBoilTextMessage == NULL)
@@ -1614,9 +1820,13 @@ void vBrewBoilSetupFunction(int piParameters[5])
       xQueueSendToBack(xBrewAppletTextQueue, &xBoilTextMessage, 0);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       vValveActuate(MASH_VALVE, CLOSE); // Runs water through the other side of the chiller.
 =======
 >>>>>>> master
+=======
+      vValveActuate(MASH_VALVE, CLOSE); // Runs water through the other side of the chiller.
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
       vValveActuate(MASH_VALVE, CLOSE); // Runs water through the other side of the chiller.
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1638,10 +1848,14 @@ void vBrewBoilSetupFunction(int piParameters[5])
   vConsolePrint("Boil Setup Function called\r\n");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   xQueueSendToBack(xBoilQueue, &xBoilMessage, 5000);
 =======
   xQueueSendToBack(xBoilQueue, &xBoilMessage, 0);
 >>>>>>> master
+=======
+  xQueueSendToBack(xBoilQueue, &xBoilMessage, 5000);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   xQueueSendToBack(xBoilQueue, &xBoilMessage, 5000);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1661,6 +1875,9 @@ void vBrewBoilPollFunction(int piParameters[5])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //#ifdef TESTING
@@ -1675,8 +1892,11 @@ void vBrewBoilPollFunction(int piParameters[5])
 //         vBrewNextStep();
 //#endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   //===================================================================================
@@ -1686,10 +1906,14 @@ void vBrewBoilPollFunction(int piParameters[5])
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       xBoilMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 =======
       xBoilMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 >>>>>>> master
+=======
+      xBoilMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
       xBoilMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1711,10 +1935,14 @@ void vBrewBoilPollFunction(int piParameters[5])
   //Brew[BrewState.ucStep].uTimeRemaining = (BrewParameters.uiBoilTime*60) - Brew[BrewState.ucStep].uElapsedTime;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   //if (iTimeRemaining != iLastTime)
 =======
   if (iTimeRemaining != iLastTime)
 >>>>>>> master
+=======
+  //if (iTimeRemaining != iLastTime)
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   //if (iTimeRemaining != iLastTime)
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1797,10 +2025,14 @@ void vBrewBoilPollFunction(int piParameters[5])
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (iTimeRemaining <=   BrewParameters.uiHopTimes[5])
 =======
       if (iTimeRemaining <   BrewParameters.uiHopTimes[5])
 >>>>>>> master
+=======
+      if (iTimeRemaining <=   BrewParameters.uiHopTimes[5])
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
       if (iTimeRemaining <=   BrewParameters.uiHopTimes[5])
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1825,9 +2057,13 @@ void vBrewBoilPollFunction(int piParameters[5])
           xQueueSendToBack(xBoilQueue, &xBoilMessage, 0);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           vConsolePrint("Boil Completed, sent duty 0 to boil\r\n");
 =======
 >>>>>>> master
+=======
+          vConsolePrint("Boil Completed, sent duty 0 to boil\r\n");
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
           vConsolePrint("Boil Completed, sent duty 0 to boil\r\n");
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1864,6 +2100,7 @@ void vBrewBoilPollFunction(int piParameters[5])
 void vBrewApplet(int init){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (init)
     {
@@ -1875,6 +2112,12 @@ void vBrewApplet(int init){
       heap = xPortGetFreeHeapSize();
       vConsolePrint("HEAP REMAINING: %d\r\n", heap);
 >>>>>>> master
+=======
+
+  if (init)
+    {
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
   if (init)
@@ -1943,10 +2186,14 @@ void vBrewApplet(int init){
             ( signed portCHAR * ) "Brew Task",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             configMINIMAL_STACK_SIZE + 900,
 =======
             configMINIMAL_STACK_SIZE + 800,
 >>>>>>> master
+=======
+            configMINIMAL_STACK_SIZE + 900,
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
             configMINIMAL_STACK_SIZE + 900,
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -1960,10 +2207,14 @@ void vBrewApplet(int init){
             ( signed portCHAR * ) "Brew HLT",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             configMINIMAL_STACK_SIZE + 300,
 =======
             configMINIMAL_STACK_SIZE + 200,
 >>>>>>> master
+=======
+            configMINIMAL_STACK_SIZE + 300,
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
             configMINIMAL_STACK_SIZE + 300,
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -2099,6 +2350,9 @@ void vBrewResAppletDisplay(void * pvParameters){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 unsigned int uiGetBrewAppletDisplayHWM()
@@ -2136,8 +2390,11 @@ unsigned int uiGetBrewResAppletHWM()
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -2152,10 +2409,14 @@ void vBrewAppletDisplay( void *pvParameters){
   struct TextMsg * RcvdTextMsg;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   RcvdTextMsg = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
 =======
   RcvdTextMsg = (struct TextMsg *)malloc(sizeof(struct TextMsg));
 >>>>>>> master
+=======
+  RcvdTextMsg = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
   RcvdTextMsg = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -2170,9 +2431,13 @@ void vBrewAppletDisplay( void *pvParameters){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -2292,6 +2557,9 @@ void vBrewAppletDisplay( void *pvParameters){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void vBrewRemoteStart(){
@@ -2300,8 +2568,11 @@ void vBrewRemoteStart(){
   xQueueSendToBack(xBrewTaskStateQueue, &uRun, 0);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -2329,9 +2600,13 @@ static uint8_t uEvaluateTouch(int xx, int yy)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -2348,12 +2623,15 @@ int iBrewKey(int xx, int yy)
   static unsigned char ucPause = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   static struct GenericMessage * xMessage;
   xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
 
 
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -2735,10 +3013,16 @@ static struct BrewStep Brew[] = {
     {"MO pump to boil",      (void *)vBrewPumpToBoilSetupFunction,(void *)vBrewPumpToBoilPollFunction,{0,7*60,0,0,0},                      11*60,  0,      0, 0, 0},
     {"Drain for Sparge",     (void *)vBrewHLTSetupFunction,       NULL,                              {HLT_STATE_DRAIN,SPARGE,0,0,0},       10*60,  0,      0, 0, 1},
 <<<<<<< HEAD
+<<<<<<< HEAD
     {"Sparge",               NULL,                                (void *)vBrewMashPollFunction,     {5,2,0,1,3},                          5*60,   0,      0, 0, 1},
     {"Pump to boil",         (void *)vBrewPumpToBoilSetupFunction,(void *)vBrewPumpToBoilPollFunction,{0,3*60,0,0,0},                      11*60,  0,      0, 0, 1},
     {"Raise Crane",          (void *)vBrewCraneSetupFunction,     NULL,                              {UP,0,0,0,0},                         10,     0,      0, 0, 0},
 >>>>>>> master
+=======
+    {"Sparge",               (void *)vBrewSpargeSetupFunction,    (void *)vBrewMashPollFunction,     {0,0,0,0,0},                          5*60,   0,      0, 0, 1},
+    {"Raise Crane",          (void *)vBrewCraneSetupFunction,     NULL,                              {UP,0,0,0,0},                         10,     0,      0, 0, 1},
+    {"Pump to boil",         (void *)vBrewPumpToBoilSetupFunction,(void *)vBrewPumpToBoilPollFunction,{0,4*60,0,0,0},                      11*60,  0,      0, 0, 1},
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     {"Sparge",               (void *)vBrewSpargeSetupFunction,    (void *)vBrewMashPollFunction,     {0,0,0,0,0},                          5*60,   0,      0, 0, 1},
     {"Raise Crane",          (void *)vBrewCraneSetupFunction,     NULL,                              {UP,0,0,0,0},                         10,     0,      0, 0, 1},
@@ -2755,6 +3039,7 @@ static struct BrewStep Brew[] = {
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2848,6 +3133,8 @@ static struct BrewStep BrewClean[] = {
 
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 //
 //// BREW CLEAN STEPS
@@ -2891,6 +3178,7 @@ static struct BrewStep BrewClean[] = {
 //    {"Close BoilValve",      (void *)vBrewBoilValveSetupFunction, NULL,                              {CLOSE,0,0,0,0},                      5,      0,      0, 0, 1},
 //    {"Lower Crane",          (void *)vBrewCraneSetupFunction,     NULL,                              {DN_INC,0,0,0,0},                         25,     0,      0, 0, 1},
 <<<<<<< HEAD
+<<<<<<< HEAD
     {"Waiting1",               NULL,                               (void *)vBrewWaitingPollFunction ,  {2,0,0,0,0},            20,     0,      0, 0, 0},
 
    // {"Open BoilValve",      (void *)vBrewBoilValveSetupFunction, NULL,                               {OPEN,0,0,0,0},                      5,      0,      0, 0, 0},
@@ -2910,6 +3198,8 @@ static struct BrewStep BrewClean[] = {
 };
 >>>>>>> master
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //    {"Waiting1",               NULL,                               (void *)vBrewWaitingPollFunction ,  {2,0,0,0,0},            20,     0,      0, 0, 0},
 //    {"Raise Crane",          (void *)vBrewCraneSetupFunction,     NULL,                              {UP,0,0,0,0},                         25,     0,      0, 0, 1},
 //   // {"Open BoilValve",      (void *)vBrewBoilValveSetupFunction, NULL,                               {OPEN,0,0,0,0},                      5,      0,      0, 0, 0},
@@ -2927,6 +3217,9 @@ static struct BrewStep BrewClean[] = {
 //    {"Waiting4",              NULL,                                (void *)vBrewWaitingPollFunction ,  {2,0,0,0,0},            20,     0,      0, 0, 1},
 //    {NULL,                    NULL,                                NULL,                               {0,0,0,0,0},            0,      0,      0, 0, 0}
 //};
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 

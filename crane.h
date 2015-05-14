@@ -22,6 +22,7 @@
 //#define CRANE_UPPER_LIMIT_PIN GPIO_Pin_14
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //#define CRANE_UPPER_LIMIT_PIN GPIO_Pin_8
 //#define CRANE_UPPER_LIMIT_PORT GPIOC
 
@@ -45,6 +46,11 @@
 //#define CRANE_UPPER_LIMIT_PIN GPIO_Pin_8
 //#define CRANE_UPPER_LIMIT_PORT GPIOC
 
+=======
+//#define CRANE_UPPER_LIMIT_PIN GPIO_Pin_8
+//#define CRANE_UPPER_LIMIT_PORT GPIOC
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //now on I2C
 #define CRANE_UPPER_LIMIT_PIN 1
 #define CRANE_UPPER_LIMIT_PORT PORTV
@@ -54,6 +60,9 @@
 
 //#define CRANE_LOWER_LIMIT_PIN GPIO_Pin_12
 //#define CRANE_LIMIT_PORT GPIOB
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 // Crane outputs
@@ -71,6 +80,7 @@ int iCraneKey(int x, int y);
 // Directions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define UP 10
 #define DN 20
 #define DN_INC 30
@@ -79,6 +89,11 @@ int iCraneKey(int x, int y);
 #define DN 2
 #define DN_INC 3
 >>>>>>> master
+=======
+#define UP 10
+#define DN 20
+#define DN_INC 30
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #define UP 10
 #define DN 20

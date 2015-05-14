@@ -9,6 +9,7 @@
 #define I2C_IO_H_
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define TRUE 1
 #define FALSE 0
 #define ERROR 255
@@ -16,10 +17,15 @@
 =======
 >>>>>>> master
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #define TRUE 1
 #define FALSE 0
 #define ERROR 255;
 
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 void vI2C_Init(void);
@@ -31,9 +37,13 @@ void vI2C_SendTask(void * pvParameters);
 void vI2C_TestTask(void *pvParameters);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 char cI2cGetInput(char port, char pin);
 =======
 >>>>>>> master
+=======
+char cI2cGetInput(char port, char pin);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 char cI2cGetInput(char port, char pin);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

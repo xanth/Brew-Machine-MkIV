@@ -17,9 +17,13 @@
 #include <stdarg.h>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <string.h>
 =======
 >>>>>>> master
+=======
+#include <string.h>
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include <string.h>
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -33,10 +37,15 @@
 #include "queue.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "console.h"
 #include "main.h"
 =======
 >>>>>>> master
+=======
+#include "console.h"
+#include "main.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "console.h"
 #include "main.h"
@@ -54,9 +63,13 @@ void vConsolePrintTask(void * pvParameters)
       xQueueReceive(xPrintQueue, &pcMessageToPrint, portMAX_DELAY);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -66,6 +79,7 @@ void vConsolePrintTask(void * pvParameters)
         {
           portENTER_CRITICAL();
           printf(pcMessageToPrint);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           fflush(stdout);
@@ -78,6 +92,13 @@ void vConsolePrintTask(void * pvParameters)
       //    pcLastMessage = pcMessageToPrint;
 
 >>>>>>> master
+=======
+          fflush(stdout);
+          portEXIT_CRITICAL();
+      //    pcLastMessage = pcMessageToPrint;
+          vTaskDelay(10); //wait for the usart to print before filling it's buffer.
+          //maybe can do something with the interrupt flags here?
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
           fflush(stdout);
           portEXIT_CRITICAL();
@@ -91,6 +112,7 @@ void vConsolePrintTask(void * pvParameters)
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -113,9 +135,18 @@ void vConsolePrint(const char * cX)
 const char * pcX = "ConsolePrint failed\r\n";
 void vConsolePrint(const char * format)
 {
+=======
+
+const char * pcX = "ConsolePrint failed\r\n";
+void vConsolePrint(const char * format)
+{
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
    if ( xQueueSendToBack(xPrintQueue, &format, 30) != pdPASS)
      xQueueSendToBack(xPrintQueue, &pcX, 30);
 
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 }

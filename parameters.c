@@ -10,6 +10,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #include <stdint.h>
@@ -76,10 +79,13 @@ struct UserParameters UserParametersList[] =
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 struct Parameters BrewParameters;
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -88,6 +94,9 @@ void vParametersInit(void)
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 #ifdef TESTING
@@ -97,8 +106,11 @@ void vParametersInit(void)
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   //Grind
@@ -106,6 +118,7 @@ void vParametersInit(void)
 
   //Mash
   BrewParameters.fHLTMaxLitres = 22.0; // This is the max amount that can be drained
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   BrewParameters.fStrikeTemp = 79.6;
@@ -140,6 +153,9 @@ void vParametersInit(void)
 =======
   BrewParameters.fStrikeTemp = 79.6;
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+  BrewParameters.fStrikeTemp = 79.6;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   BrewParameters.fMashOutTemp = 99.9;
   BrewParameters.fSpargeTemp = 78.0;
   BrewParameters.fCleanTemp = 70.0; // less than the temp of a new strike. For 2 brews.
@@ -150,10 +166,13 @@ void vParametersInit(void)
   BrewParameters.iPumpTime1 = 15;
   BrewParameters.iStirTime1 = 15;
 <<<<<<< HEAD
+<<<<<<< HEAD
   BrewParameters.iPumpTime2 = 5;
   BrewParameters.iStirTime2 = 0;
 >>>>>>> master
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   BrewParameters.iPumpTime2 = 15;
   BrewParameters.iStirTime2 = 10;  // mashing out so stirring here is OK
 
@@ -171,6 +190,9 @@ void vParametersInit(void)
       BrewParameters.iSpargePumpTime2 = 10;
       BrewParameters.iSpargeStirTime2 = 0;
 
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
   //Pump
@@ -180,6 +202,9 @@ void vParametersInit(void)
   //Boil
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   BrewParameters.uiBoilTime = 90;//60;
@@ -191,6 +216,7 @@ void vParametersInit(void)
   BrewParameters.uiHopTimes[3] = 15;
   BrewParameters.uiHopTimes[4] = 10;
   BrewParameters.uiHopTimes[5] = 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   BrewParameters.uiSettlingRecircTime = 2; //mins
@@ -736,6 +762,8 @@ int ii = 0;
   BrewParameters.uiHopTimes[5] = 1;
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
   BrewParameters.uiSettlingRecircTime = 2; //mins
     BrewParameters.uiSettlingTime = 6; //mins
@@ -1082,9 +1110,12 @@ void vParametersAppletDisplay( void *pvParameters){
 //                          }
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 //}
 >>>>>>> master
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 //                        break;
 //                }
 //                default:
@@ -1273,4 +1304,7 @@ int ii = 0;
 
 }
 
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c

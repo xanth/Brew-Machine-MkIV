@@ -7,9 +7,13 @@
 #include <stdint.h>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <math.h>
 =======
 >>>>>>> master
+=======
+#include <math.h>
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include <math.h>
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -27,9 +31,13 @@
 #include "stm32f10x_i2c.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "semphr.h"
 =======
 >>>>>>> master
+=======
+#include "semphr.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "semphr.h"
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -56,9 +64,13 @@
 #include "stir.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "stirApplet.h"
 =======
 >>>>>>> master
+=======
+#include "stirApplet.h"
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 #include "stirApplet.h"
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -69,6 +81,7 @@
 #include "console.h"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #include "brew.h"
 #include "parameters.h"
@@ -80,11 +93,16 @@
 #include "boil_valve.h"
 >>>>>>> master
 =======
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 #include "brew.h"
 #include "parameters.h"
 #include "boil_valve.h"
 #include "main.h"
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
 /*-----------------------------------------------------------*/
@@ -118,12 +136,18 @@ xTaskHandle xLCDTaskHandle,
     xBrewTaskHandle,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xBoilValveTaskHandle,
     xSerialHandlerTaskHandle,
     xSerialControlTaskHandle;
 =======
     xBoilValveTaskHandle;
 >>>>>>> master
+=======
+    xBoilValveTaskHandle,
+    xSerialHandlerTaskHandle,
+    xSerialControlTaskHandle;
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
     xBoilValveTaskHandle,
     xSerialHandlerTaskHandle,
@@ -171,6 +195,9 @@ int example_applet_touch_handler(int xx, int yy)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 /*
@@ -197,6 +224,7 @@ B9118BEE3E5948C9806A71439478177E
      */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void vCheckTask(void *pvParameters)
 {
   char buf[50];
@@ -217,6 +245,10 @@ void vCheckTask(void *pvParameters)
 =======
 void vCheckTask(void *pvParameters)
 {
+=======
+void vCheckTask(void *pvParameters)
+{
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   char buf[50];
   char pcBrewElapsedTime[50], pcStepElapsedTime[50];
   char pcBrewElapsedHours[45], pcBrewElapsedMinutes[45], pcBrewElapsedSeconds[45], pcBrewStep[45];
@@ -226,6 +258,9 @@ void vCheckTask(void *pvParameters)
   char upper_limit = 255, lower_limit = 255;
   unsigned int touch, hops, ds1820, timer, litres, check, low_level = 90, heap, print, serial, serialcontrol;
   unsigned int display_applet, stats_applet, res_applet, graph_applet, brew_task;
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   for (;;){
 
@@ -237,6 +272,7 @@ void vCheckTask(void *pvParameters)
       print = uxTaskGetStackHighWaterMark(xPrintTaskHandle);
       hops = uxTaskGetStackHighWaterMark(xHopsTaskHandle);
       check = uxTaskGetStackHighWaterMark(NULL);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       serial = uxTaskGetStackHighWaterMark(xSerialHandlerTaskHandle);
@@ -325,6 +361,12 @@ void vCheckTask(void *pvParameters)
       serialcontrol = uxTaskGetStackHighWaterMark(xSerialControlTaskHandle);
       heap = xPortGetFreeHeapSize();
 
+=======
+      serial = uxTaskGetStackHighWaterMark(xSerialHandlerTaskHandle);
+      serialcontrol = uxTaskGetStackHighWaterMark(xSerialControlTaskHandle);
+      heap = xPortGetFreeHeapSize();
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
       display_applet =  uiGetBrewAppletDisplayHWM();
       res_applet =  uiGetBrewResAppletHWM();
       stats_applet =  uiGetBrewStatsAppletHWM();
@@ -392,6 +434,9 @@ void vCheckTask(void *pvParameters)
            brew_task < low_level || TRUE)
 
 
+<<<<<<< HEAD
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
         {
           //vTaskSuspendAll();
@@ -400,6 +445,9 @@ void vCheckTask(void *pvParameters)
           vConsolePrint(cBuf);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
           vTaskDelay(50);
           sprintf(cBuf, "touchwm = %d\r\n", touch);
 
@@ -448,6 +496,7 @@ void vCheckTask(void *pvParameters)
           vConsolePrint(cBuf);
           vConsolePrint("=============================\r\n");
           //xTaskResumeAll();
+<<<<<<< HEAD
 =======
 =======
           vTaskDelay(50);
@@ -504,16 +553,22 @@ void vCheckTask(void *pvParameters)
 =======
           //xTaskResumeAll();
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
           vTaskDelay(500);
 
         }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       vTaskDelay(500);
 =======
       vTaskDelay(1000);
 >>>>>>> master
+=======
+      vTaskDelay(500);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
       vTaskDelay(500);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -564,6 +619,7 @@ struct menu main_menu[] =
         {"Manual Control",      manual_menu,    		NULL, 				NULL, 			NULL},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {"Pumps/Valves" ,     pumps_valves,                     NULL,                           NULL,                   NULL},
         {"Diagnostics",         diag_menu,                      NULL,                           NULL,                   NULL},
         {"Parameters",         NULL,                            vParametersApplet,              NULL,                   iParametersKey},
@@ -571,6 +627,11 @@ struct menu main_menu[] =
         {"Pumps/Valves" ,     pumps_valves,                   NULL,                           NULL,                   NULL},
         {"Diagnostics",         diag_menu,                      NULL,                           NULL,                   NULL},
 >>>>>>> master
+=======
+        {"Pumps/Valves" ,     pumps_valves,                     NULL,                           NULL,                   NULL},
+        {"Diagnostics",         diag_menu,                      NULL,                           NULL,                   NULL},
+        {"Parameters",         NULL,                            vParametersApplet,              NULL,                   iParametersKey},
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
         {"Pumps/Valves" ,     pumps_valves,                     NULL,                           NULL,                   NULL},
         {"Diagnostics",         diag_menu,                      NULL,                           NULL,                   NULL},
@@ -589,6 +650,9 @@ int main( void )
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
   USARTInit(USART_PARAMS1);
@@ -598,9 +662,12 @@ int main( void )
     //  printf("Usart up and running!\r\n");
     xPrintQueue = xQueueCreate(150, sizeof(char *));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     xPrintQueue = xQueueCreate(15, sizeof(char *));
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     if (xPrintQueue == NULL)
@@ -611,6 +678,9 @@ int main( void )
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -618,9 +688,12 @@ int main( void )
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     USARTInit(USART_PARAMS1);
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -665,6 +738,7 @@ int main( void )
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 
@@ -692,6 +766,26 @@ int main( void )
 >>>>>>> master
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+
+    //vRunTimeTimerSetup(); // set up the runtime timer
+
+    xTaskCreate( vSerialHandlerTask,
+            ( signed portCHAR * ) "SerialTask",
+            configMINIMAL_STACK_SIZE,
+            NULL,
+            tskIDLE_PRIORITY +4,
+            &xSerialHandlerTaskHandle );
+
+
+      xTaskCreate( vSerialControlCentreTask,
+                  ( signed portCHAR * ) "SerialctrlTask",
+                  configMINIMAL_STACK_SIZE + 100,
+                  NULL,
+                  tskIDLE_PRIORITY +2,
+                  &xSerialControlTaskHandle );
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     xTaskCreate( vConsolePrintTask,
         ( signed portCHAR * ) "PrintTask",
         configMINIMAL_STACK_SIZE,
@@ -703,10 +797,14 @@ int main( void )
         ( signed portCHAR * ) "touch    ",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         configMINIMAL_STACK_SIZE +300,
 =======
         configMINIMAL_STACK_SIZE +600,
 >>>>>>> master
+=======
+        configMINIMAL_STACK_SIZE +300,
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
         configMINIMAL_STACK_SIZE +300,
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -747,10 +845,14 @@ int main( void )
         ( signed portCHAR * ) "check     ",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         configMINIMAL_STACK_SIZE +400,
 =======
         configMINIMAL_STACK_SIZE +200,
 >>>>>>> master
+=======
+        configMINIMAL_STACK_SIZE +400,
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
         configMINIMAL_STACK_SIZE +400,
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -799,6 +901,7 @@ int main( void )
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* Start the scheduler. */
            vTaskStartScheduler();
 
@@ -808,12 +911,18 @@ int main( void )
 
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
     /* Start the scheduler. */
            vTaskStartScheduler();
 
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> master
+=======
+
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
@@ -915,6 +1024,9 @@ void vApplicationStackOverflowHook( xTaskHandle *pxTask, signed portCHAR *pcTask
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 void vApplicationMallocFailedHook( void )
@@ -924,8 +1036,11 @@ void vApplicationMallocFailedHook( void )
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 /*-----------------------------------------------------------*/

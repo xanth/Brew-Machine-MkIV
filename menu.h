@@ -26,9 +26,13 @@ void menu_run_applet(int (*applet_key_handler)(unsigned char));
 void menu_touch(int xx, int yy);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void menu_command(unsigned item);
 =======
 >>>>>>> master
+=======
+void menu_command(unsigned item);
+>>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
 =======
 void menu_command(unsigned item);
 >>>>>>> db059f7f6dbb785acc267ce99d8605bfef31246c
