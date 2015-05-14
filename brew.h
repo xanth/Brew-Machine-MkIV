@@ -139,13 +139,17 @@ extern const char * pcCraneStates[6];
 void vTaskBrew(void * pvParameters);
 void vBrewApplet(int init);
 int iBrewKey(int xx, int yy);
+<<<<<<< HEAD
 void vBrewRemoteStart();
+=======
+>>>>>>> master
 
 extern const int STEP_COMPLETE;
 extern const int STEP_FAILED;
 extern const int STEP_WAIT;
 
 
+<<<<<<< HEAD
 
 unsigned char ucGetBrewHoursElapsed();
 
@@ -167,6 +171,8 @@ unsigned int uiGetBrewTaskHWM();
 
 
 
+=======
+>>>>>>> master
 extern xQueueHandle xBrewTaskReceiveQueue,  xBrewAppletTextQueue;
 
 #endif /* BREW_H_ */

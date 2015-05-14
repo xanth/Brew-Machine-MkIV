@@ -20,6 +20,7 @@
  */
 
 #include "stm32f10x.h"
+<<<<<<< HEAD
 #include <unistd.h>
 
 #include <string.h>
@@ -32,6 +33,16 @@
 #include "FreeRTOS.h"
 #include <stdlib.h>
 
+=======
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <errno.h>
+#include <time.h>
+#include <sys/stat.h>
+#include "FreeRTOS.h"
+#include "serial.h"
+>>>>>>> master
 
 // Function declaration.
 void _exit(int i);
@@ -105,6 +116,7 @@ int _lseek(int file, int ptr, int dir)
 
 int _read(int file, char *ptr, int len)
 {
+<<<<<<< HEAD
 
   int n;
      int num = 0;
@@ -121,6 +133,8 @@ int _read(int file, char *ptr, int len)
          return -1;
      }
      return num;
+=======
+>>>>>>> master
 	return 0;
 }
 
@@ -233,6 +247,7 @@ _PTR _malloc_r(struct _reent *re, size_t size) {
 _VOID _free_r(struct _reent *re, _PTR ptr) {
 	vPortFree(ptr);
 }
+<<<<<<< HEAD
 /*
  void * __attribute__((malloc)) malloc(size_t size)
 {
@@ -240,3 +255,10 @@ _VOID _free_r(struct _reent *re, _PTR ptr) {
 }
 */
 
+=======
+
+void *malloc(size_t size)
+{
+    return pvPortMalloc(size);
+}
+>>>>>>> master

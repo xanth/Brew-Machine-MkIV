@@ -20,7 +20,10 @@
 #include "I2C-IO.h"
 #include "chiller_pump.h"
 #include "console.h"
+<<<<<<< HEAD
 #include "main.h"
+=======
+>>>>>>> master
 
 void vChillerPumpAppletDisplay( void *pvParameters);
 void vChillerPumpApplet(int init);
@@ -33,10 +36,13 @@ xSemaphoreHandle xChillerAppletRunningSemaphore;
 
 volatile int uChillerPumpState = STOPPED;
 
+<<<<<<< HEAD
 unsigned char ucGetChillerPumpState(){
   return uChillerPumpState;
 }
 
+=======
+>>>>>>> master
 void vChillerPumpInit(void){
 
   GPIO_InitTypeDef GPIO_InitStructure;

@@ -5,7 +5,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
+<<<<<<< HEAD
 #include <math.h>
+=======
+>>>>>>> master
 
 /* Scheduler includes. */
 #include "FreeRTOS.h"
@@ -18,7 +21,10 @@
 #include "stm32f10x_it.h"
 #include "stm32f10x_rcc.h"
 #include "stm32f10x_i2c.h"
+<<<<<<< HEAD
 #include "semphr.h"
+=======
+>>>>>>> master
 
 /*app includes. */
 //#include "stm3210e_lcd.h"
@@ -40,17 +46,26 @@
 #include "hop_dropper.h"
 #include "boil.h"
 #include "stir.h"
+<<<<<<< HEAD
 #include "stirApplet.h"
+=======
+>>>>>>> master
 #include "Flow1.h"
 #include "diag_pwm.h"
 #include "I2C-IO.h"
 #include "chiller_pump.h"
 #include "console.h"
+<<<<<<< HEAD
 
 #include "brew.h"
 #include "parameters.h"
 #include "boil_valve.h"
 #include "main.h"
+=======
+#include "brew.h"
+#include "parameters.h"
+#include "boil_valve.h"
+>>>>>>> master
 
 /*-----------------------------------------------------------*/
 
@@ -81,9 +96,13 @@ xTaskHandle xLCDTaskHandle,
     xLitresToMashHandle,
     xHopsTaskHandle,
     xBrewTaskHandle,
+<<<<<<< HEAD
     xBoilValveTaskHandle,
     xSerialHandlerTaskHandle,
     xSerialControlTaskHandle;
+=======
+    xBoilValveTaskHandle;
+>>>>>>> master
 
 
 
@@ -124,6 +143,7 @@ int example_applet_touch_handler(int xx, int yy)
 	return xx > 200 && yy > 200;
 }
 
+<<<<<<< HEAD
 /*
  mashtemp    E21DFC36AFB24226A323D7931B6A1F30
  test        BD52AA172CAE4F58A11EC35872EFEB99
@@ -158,6 +178,12 @@ void vCheckTask(void *pvParameters)
   char upper_limit = 255, lower_limit = 255;
   unsigned int touch, hops, ds1820, timer, litres, check, low_level = 90, heap, print, serial, serialcontrol;
   unsigned int display_applet, stats_applet, res_applet, graph_applet, brew_task;
+=======
+void vCheckTask(void *pvParameters)
+{
+
+  unsigned int touch, hops, ds1820, timer, litres, check, low_level = 90, heap, print;
+>>>>>>> master
   for (;;){
 
       touch = uxTaskGetStackHighWaterMark(xTouchTaskHandle);
@@ -168,6 +194,7 @@ void vCheckTask(void *pvParameters)
       print = uxTaskGetStackHighWaterMark(xPrintTaskHandle);
       hops = uxTaskGetStackHighWaterMark(xHopsTaskHandle);
       check = uxTaskGetStackHighWaterMark(NULL);
+<<<<<<< HEAD
       serial = uxTaskGetStackHighWaterMark(xSerialHandlerTaskHandle);
       serialcontrol = uxTaskGetStackHighWaterMark(xSerialControlTaskHandle);
       heap = xPortGetFreeHeapSize();
@@ -239,11 +266,22 @@ void vCheckTask(void *pvParameters)
            brew_task < low_level || TRUE)
 
 
+=======
+      heap = xPortGetFreeHeapSize();
+
+      if (touch < low_level ||
+          timer < low_level ||
+          litres < low_level||
+          print < low_level ||
+          hops < low_level ||
+          check < low_level)
+>>>>>>> master
         {
           //vTaskSuspendAll();
           vConsolePrint("=============================\r\n");
           sprintf(cBuf,"check task: idle ticks = %d\r\n", ulIdleCycleCount);
           vConsolePrint(cBuf);
+<<<<<<< HEAD
           vTaskDelay(50);
           sprintf(cBuf, "touchwm = %d\r\n", touch);
 
@@ -292,11 +330,35 @@ void vCheckTask(void *pvParameters)
           vConsolePrint(cBuf);
           vConsolePrint("=============================\r\n");
           //xTaskResumeAll();
+=======
+          sprintf(cBuf, "touchwm = %d\r\n", touch);
+          vConsolePrint(cBuf);
+          sprintf(cBuf, "DS1820wm = %d\r\n", ds1820);
+          vConsolePrint(cBuf);
+          sprintf(cBuf, "TimerSetupwm = %d\r\n", timer);
+          vConsolePrint(cBuf);
+          sprintf(cBuf, "litreswm = %d\r\n", litres);
+          vConsolePrint(cBuf);
+          sprintf(cBuf, "hopswm = %d\r\n", hops);
+          vConsolePrint(cBuf);
+          sprintf(cBuf, "check = %d\r\n", check);
+          vConsolePrint(cBuf);
+          sprintf(cBuf, "Free Heap Size = %d\r\n", heap);
+          vConsolePrint(cBuf);
+          sprintf(cBuf, "print = %d\r\n", print);
+          vConsolePrint(cBuf);
+          vConsolePrint("=============================\r\n");
+//xTaskResumeAll();
+>>>>>>> master
           vTaskDelay(500);
 
         }
 
+<<<<<<< HEAD
       vTaskDelay(500);
+=======
+      vTaskDelay(1000);
+>>>>>>> master
       taskYIELD();
   }
 
@@ -342,9 +404,14 @@ struct menu pumps_valves[] =
 struct menu main_menu[] =
     {
         {"Manual Control",      manual_menu,    		NULL, 				NULL, 			NULL},
+<<<<<<< HEAD
         {"Pumps/Valves" ,     pumps_valves,                     NULL,                           NULL,                   NULL},
         {"Diagnostics",         diag_menu,                      NULL,                           NULL,                   NULL},
         {"Parameters",         NULL,                            vParametersApplet,              NULL,                   iParametersKey},
+=======
+        {"Pumps/Valves" ,     pumps_valves,                   NULL,                           NULL,                   NULL},
+        {"Diagnostics",         diag_menu,                      NULL,                           NULL,                   NULL},
+>>>>>>> master
         {"BREW",                NULL,                           vBrewApplet,                    NULL,                   iBrewKey},
         {NULL,                  NULL, 				NULL,                           NULL, 			NULL}
     };
@@ -356,22 +423,30 @@ int main( void )
 {
     prvSetupHardware();// set up peripherals etc 
 
+<<<<<<< HEAD
   USARTInit(USART_PARAMS1);
 
 
 
     //  printf("Usart up and running!\r\n");
     xPrintQueue = xQueueCreate(150, sizeof(char *));
+=======
+    xPrintQueue = xQueueCreate(15, sizeof(char *));
+>>>>>>> master
     if (xPrintQueue == NULL)
       {
         printf("Failed to make print queue\r\n");
         for (;;);
       }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+    USARTInit(USART_PARAMS1);
+>>>>>>> master
 
     vParametersInit();
 
@@ -412,6 +487,7 @@ int main( void )
 
     vBoilValveInit();
 
+<<<<<<< HEAD
 
     //vRunTimeTimerSetup(); // set up the runtime timer
 
@@ -430,6 +506,10 @@ int main( void )
                   tskIDLE_PRIORITY +2,
                   &xSerialControlTaskHandle );
 
+=======
+    //vRunTimeTimerSetup(); // set up the runtime timer
+
+>>>>>>> master
     xTaskCreate( vConsolePrintTask,
         ( signed portCHAR * ) "PrintTask",
         configMINIMAL_STACK_SIZE,
@@ -439,7 +519,11 @@ int main( void )
 
     xTaskCreate( vTouchTask, 
         ( signed portCHAR * ) "touch    ",
+<<<<<<< HEAD
         configMINIMAL_STACK_SIZE +300,
+=======
+        configMINIMAL_STACK_SIZE +600,
+>>>>>>> master
         NULL,
         tskIDLE_PRIORITY,
         &xTouchTaskHandle );
@@ -475,7 +559,11 @@ int main( void )
 
     xTaskCreate( vCheckTask,
         ( signed portCHAR * ) "check     ",
+<<<<<<< HEAD
         configMINIMAL_STACK_SIZE +400,
+=======
+        configMINIMAL_STACK_SIZE +200,
+>>>>>>> master
         NULL,
         tskIDLE_PRIORITY,
         &xCheckTaskHandle );
@@ -519,11 +607,18 @@ int main( void )
               & xI2C_SendHandle );
 
 
+<<<<<<< HEAD
     /* Start the scheduler. */
            vTaskStartScheduler();
 
     
 
+=======
+
+    /* Start the scheduler. */
+    vTaskStartScheduler();
+    
+>>>>>>> master
     printf("FAIL\r\n");
 
     /* Will only get here if there was insufficient memory to create the idle
@@ -620,12 +715,15 @@ void vApplicationStackOverflowHook( xTaskHandle *pxTask, signed portCHAR *pcTask
     for( ;; );
 }
 
+<<<<<<< HEAD
 void vApplicationMallocFailedHook( void )
 {
   vConsolePrint("MALLOC FAILED!");
   for(;;);
 }
 
+=======
+>>>>>>> master
 /*-----------------------------------------------------------*/
 void vApplicationIdleHook(void){
    ulIdleCycleCount++;

@@ -7,10 +7,13 @@
 
 #ifndef I2C_IO_H_
 #define I2C_IO_H_
+<<<<<<< HEAD
 #define TRUE 1
 #define FALSE 0
 #define ERROR 255
 
+=======
+>>>>>>> master
 
 void vI2C_Init(void);
 //void vI2C_Send(char address, char data);
@@ -19,7 +22,10 @@ void vPCF_ResetBits(uint8_t bitnum, uint8_t add);
 //extern xQueueHandle xI2C_SendQueue;
 void vI2C_SendTask(void * pvParameters);
 void vI2C_TestTask(void *pvParameters);
+<<<<<<< HEAD
 char cI2cGetInput(char port, char pin);
+=======
+>>>>>>> master
 #define I2C_SLAVE_ADDRESS0 0x70
 #define I2C_SLAVE_ADDRESS1 0x72
 #define I2C_SLAVE_ADDRESS2 0x74

@@ -267,7 +267,10 @@ void vTouchTask( void *pvParameters )
 			if (!valid)
 				menu_touch(x, y);
 			valid = 1;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 		}
 		else if (valid)
 		{

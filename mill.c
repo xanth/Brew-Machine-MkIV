@@ -11,7 +11,11 @@
 //-------------------------------------------------------------------------
 #include <stdint.h>
 #include <stdio.h>
+<<<<<<< HEAD
 
+=======
+#include "mill.h"
+>>>>>>> master
 #include "stm32f10x.h"
 #include "FreeRTOS.h"
 #include "lcd.h"
@@ -19,8 +23,11 @@
 #include "adc.h"
 #include "leds.h"
 #include "semphr.h"
+<<<<<<< HEAD
 #include "mill.h"
 #include "main.h"
+=======
+>>>>>>> master
 
 void vMillAppletDisplay( void *pvParameters);
 void vMillApplet(int init);
@@ -30,7 +37,11 @@ xSemaphoreHandle xAppletRunningSemaphore;
 
 
 
+<<<<<<< HEAD
 volatile MillState xMillState = MILL_STOPPED;
+=======
+volatile int iMillState = MILL_STOPPED;
+>>>>>>> master
 
 void vMillInit(void){
 
@@ -40,19 +51,30 @@ void vMillInit(void){
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;// Output - Push Pull
   GPIO_Init( MILL_PORT, &GPIO_InitStructure );
   GPIO_ResetBits(MILL_PORT, MILL_PIN); //pull low
+<<<<<<< HEAD
   xMillState = MILL_STOPPED;
+=======
+>>>>>>> master
   vSemaphoreCreateBinary(xAppletRunningSemaphore);
 
 
 }
 
+<<<<<<< HEAD
 void vMill( MillState state )
+=======
+void vMill( int state )
+>>>>>>> master
 {
   if (state == MILL_DRIVING)
     GPIO_WriteBit(MILL_PORT, MILL_PIN, 1);
   else
     GPIO_WriteBit(MILL_PORT, MILL_PIN, 0);
+<<<<<<< HEAD
   xMillState = state;
+=======
+  iMillState = state;
+>>>>>>> master
 
 }
 
@@ -114,7 +136,11 @@ void vMillAppletDisplay( void *pvParameters){
 
             xSemaphoreTake(xAppletRunningSemaphore, portMAX_DELAY); //take the semaphore so that the key handler wont
                                                                                //return to the menu system until its returned
+<<<<<<< HEAD
                 switch (xMillState)
+=======
+                switch (iMillState)
+>>>>>>> master
                 {
                 case MILL_DRIVING:
                 {
@@ -166,13 +192,21 @@ int iMillKey(int xx, int yy)
   if (xx > STOP_MILL_X1+1 && xx < STOP_MILL_X2-1 && yy > STOP_MILL_Y1+1 && yy < STOP_MILL_Y2-1)
     {
       vMill(MILL_STOPPED);
+<<<<<<< HEAD
 
+=======
+      iMillState = MILL_STOPPED;
+>>>>>>> master
 
     }
   else if (xx > START_MILL_X1+1 && xx < START_MILL_X2-1 && yy > START_MILL_Y1+1 && yy < START_MILL_Y2-1)
     {
       vMill(MILL_DRIVING);
+<<<<<<< HEAD
 
+=======
+      iMillState = MILL_DRIVING;
+>>>>>>> master
     }
   else if (xx > BK_X1 && yy > BK_Y1 && xx < BK_X2 && yy < BK_Y2)
     {

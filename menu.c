@@ -37,7 +37,11 @@ static int (*g_menu_applet)(int, int) = NULL;
 static int menu_touch_y;
 static int menu_touch_x;
 
+<<<<<<< HEAD
 //static unsigned start_time;
+=======
+static unsigned start_time;
+>>>>>>> master
 
 /*
 static void menu_update_hilight(void)
@@ -207,6 +211,7 @@ static void menu_back_after_applet()
     menu_run_callback(1);
 }
 
+<<<<<<< HEAD
 static unsigned g_incoming_command = 0;
 static unsigned g_command_item = -1;
 void menu_command(unsigned item)
@@ -223,6 +228,12 @@ void menu_touch(int xx, int yy)
 {
   //char c[15];
   vConsolePrint("Menu Touch Called\r\n");
+=======
+void menu_touch(int xx, int yy)
+{
+  //char c[15];
+  //vConsolePrint("Menu Touch Called\r\n");
+>>>>>>> master
   //sprintf(c, "x %d y %d\r\n", xx, yy);
    //vConsolePrint(c);
 
@@ -236,6 +247,7 @@ void menu_touch(int xx, int yy)
     menu_touch_y = yy;
     menu_touch_x = xx;    
     //menu_update();       
+<<<<<<< HEAD
     char bb[30];
     int old = g_item;
     if (g_incoming_command == 1)
@@ -252,6 +264,12 @@ void menu_touch(int xx, int yy)
    // sprintf(bb, "Item Selected is: %u\r\n", g_item);
   //  vConsolePrint(bb);
   //  fflush(stdout);
+=======
+
+    int old = g_item;
+    g_item = menu_get_selected();
+
+>>>>>>> master
     lcd_lock();
 
     if (old != -1)

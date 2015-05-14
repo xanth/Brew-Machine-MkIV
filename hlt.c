@@ -22,7 +22,10 @@
 #include "brew.h"
 #include "console.h"
 #include "Flow1.h"
+<<<<<<< HEAD
 #include "main.h"
+=======
+>>>>>>> master
 
 volatile char hlt_state = OFF;
 
@@ -86,14 +89,24 @@ void vTaskBrewHLT(void * pvParameters)
   static uint8_t uFirst = 0;
   float  fTempSetpoint = 0.0;
   static float fLitresToDrain = 0.0;
+<<<<<<< HEAD
   float fActualLitresDelivered = 0.0;
+=======
+ float fActualLitresDelivered = 0.0;
+>>>>>>> master
   float actual = 0.0;
   float hlt_level = 0.0;
   char hlt_ok = 0;
   struct TextMsg  * NewMessage;
+<<<<<<< HEAD
   NewMessage = (struct TextMsg *)pvPortMalloc(sizeof(struct TextMsg));
   struct GenericMessage * xMessage;
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+=======
+  NewMessage = (struct TextMsg *)malloc(sizeof(struct TextMsg));
+  struct GenericMessage * xMessage;
+  xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
+>>>>>>> master
   char pcMessageText[40];
   static unsigned char ucStep = 0;
   static unsigned char ucHeatAndFillMessageSent = 0;
@@ -164,7 +177,11 @@ void vTaskBrewHLT(void * pvParameters)
             {
               vTaskDelay(2000);
               vValveActuate(INLET_VALVE, CLOSE);
+<<<<<<< HEAD
               // vConsolePrint("HLT is FULL \r\n");
+=======
+             // vConsolePrint("HLT is FULL \r\n");
+>>>>>>> master
             }
           else
             vValveActuate(INLET_VALVE, OPEN);
@@ -214,6 +231,7 @@ void vTaskBrewHLT(void * pvParameters)
               GPIO_WriteBit(HLT_SSR_PORT, HLT_SSR_PIN, 0); //make sure its off
               //vConsolePrint("WARNING, Water not above element in HLT\r\n");
             }
+<<<<<<< HEAD
 #ifdef TESTING
           if (ucHeatAndFillMessageSent == 0)
             {
@@ -236,6 +254,9 @@ void vTaskBrewHLT(void * pvParameters)
               ucHeatAndFillMessageSent = 1;
             }
 #endif
+=======
+
+>>>>>>> master
 
           break;
         }
@@ -253,6 +274,7 @@ void vTaskBrewHLT(void * pvParameters)
               lcd_printf(1,10,10, "Setpoint:");
               vValveActuate(HLT_VALVE, OPEN);
               BrewState.ucHLTState = HLT_STATE_DRAIN;
+<<<<<<< HEAD
 #ifdef TESTING
               GPIO_WriteBit(HLT_SSR_PORT, HLT_SSR_PIN, 0);
               vValveActuate(INLET_VALVE, OPEN);
@@ -283,6 +305,11 @@ void vTaskBrewHLT(void * pvParameters)
 #ifdef TESTING
           fActualLitresDelivered = fLitresToDrain + 1;
 #endif
+=======
+            }
+          vValveActuate(HLT_VALVE, OPEN);
+          fActualLitresDelivered = fGetBoilFlowLitres();
+>>>>>>> master
           if (fActualLitresDelivered >= fLitresToDrain)
             {
               vValveActuate(HLT_VALVE, CLOSE);
@@ -307,7 +334,10 @@ void vTaskBrewHLT(void * pvParameters)
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 //=================================================================================================================================================================
 
 void vTaskHLTLevelChecker( void * pvParameters)

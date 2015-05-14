@@ -24,7 +24,10 @@
 #include "boil_valve.h"
 #include "io_util.h"
 #include "brew.h"
+<<<<<<< HEAD
 #include "main.h"
+=======
+>>>>>>> master
 
 
 xQueueHandle xBoilValveQueue;
@@ -105,9 +108,15 @@ void vTaskBoilValve(void * pvParameters)
 {
   // Create Message structures in memory
   static struct GenericMessage * xMessage, *xLastMessage, *xToSend;
+<<<<<<< HEAD
   xLastMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   xMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
   xToSend = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+=======
+  xLastMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
+  xMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
+  xToSend = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
+>>>>>>> master
     static int iComplete = 0;
   uint8_t limit = 0xFF, limit1 = 0xFF; //neither on or off.
   static int iC = STOP;
@@ -136,6 +145,7 @@ void vTaskBoilValve(void * pvParameters)
               iComplete = 0;
               xToSend->uiStepNumber = xMessage->uiStepNumber;
               iCommandState = 0;
+<<<<<<< HEAD
 
 //#ifdef TESTING
 //
@@ -152,6 +162,8 @@ void vTaskBoilValve(void * pvParameters)
 //                            iBoilValveState = STOPPED;
 //                          }
 //#endif
+=======
+>>>>>>> master
             }
 
 
@@ -315,7 +327,10 @@ void vTaskBoilValve(void * pvParameters)
 
         }
       }// Switch
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
       if (iCommandState == 1 && xMessage->ucFromTask == BREW_TASK)
              {
               const int iTest = 40;
@@ -487,7 +502,11 @@ int iBoilValveKey(int xx, int yy){
   static uint8_t w = 5,h = 5;
   static uint16_t last_window = 0;
   static struct GenericMessage * pxMessage;
+<<<<<<< HEAD
   pxMessage = (struct GenericMessage *)pvPortMalloc(sizeof(struct GenericMessage));
+=======
+  pxMessage = (struct GenericMessage *)malloc(sizeof(struct GenericMessage));
+>>>>>>> master
   int iOpen= OPEN, iClose = CLOSE, iStop = STOP;
   pxMessage->pvMessageContent = &iStop;
 

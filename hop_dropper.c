@@ -17,8 +17,11 @@
 #include "I2C-IO.h"
 #include "queue.h"
 #include "console.h"
+<<<<<<< HEAD
 #include "main.h"
 
+=======
+>>>>>>> master
 
 #define ON 1
 #define OFF 0
