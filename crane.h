@@ -46,9 +46,9 @@ void vCraneApplet(int init);
 int iCraneKey(int x, int y);
 
 // Directions
-#define UP 1
-#define DN 2
-#define DN_INC 3
+#define UP 10
+#define DN 20
+#define DN_INC 30
 #define STOP -1
 
 // Crane States

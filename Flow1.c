@@ -16,6 +16,7 @@
 #include "task.h"
 #include "semphr.h"
 #include "console.h"
+#include "main.h"
 // semaphore that stops the returning from the applet to the menu system until the applet goes into the blocked state.
 xSemaphoreHandle xFlow1AppletRunningSemaphore;
 

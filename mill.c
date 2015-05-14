@@ -20,6 +20,7 @@
 #include "leds.h"
 #include "semphr.h"
 #include "mill.h"
+#include "main.h"
 
 void vMillAppletDisplay( void *pvParameters);
 void vMillApplet(int init);

@@ -25,6 +25,7 @@
 #include "semphr.h"
 #include "queue.h"
 #include "console.h"
+#include "main.h"
 
 xQueueHandle xPrintQueue;
 

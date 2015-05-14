@@ -22,6 +22,9 @@
 #include "boil.h"
 #include "console.h"
 #include "adc.h"
+// main.h holds the definition for the preprocessor directive TESTING
+#include "main.h"
+
 
 
 #define BOIL_PORT GPIOD
@@ -47,6 +50,10 @@ volatile uint8_t boil_state = OFF;
 //void vBoil(uint8_t duty, uint8_t state);
 void vBoilAppletDisplay(void * pvParameters);
 void vTaskBoil( void * pvParameters);
+
+unsigned char ucGetBoilState(){
+  return boil_state;
+}
 
 // semaphore that stops the returning from the applet to the menu system until the applet goes into the blocked state.
 xSemaphoreHandle xAppletRunningSemaphore;

@@ -20,4 +20,6 @@ void vChillerPumpInit(void);
 void vChillerPumpApplet(int init);
 int iChillerPumpKey(int xx, int yy);
 void vChillerPump(uint8_t state);
+unsigned char ucGetChillerPumpState();
+
 #endif /* CHILLER_PUMP_H_ */
